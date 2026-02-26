@@ -4,16 +4,18 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import './Gallery.css';
 
 const images = [
-  { src: 'aerial.jpg', caption: 'Aerial view of MYS Retreat' },
+  { src: 'aerial.jpg', caption: 'Kayaking on Himbury Lake' },
+  { src: 'water-view.jpg', caption: 'Pristine lake waters' },
   { src: 'cottages.jpg', caption: 'Lakefront cottages' },
+  { src: 'himbury-cottage.jpg', caption: 'Cozy cottage retreat' },
   { src: 'campfire.jpg', caption: 'Evening campfire' },
-  { src: 'fishing.jpg', caption: 'Fishing on Himbury Lake' },
-  { src: 'hiking.jpg', caption: 'Hiking the trails' },
-  { src: 'fall-bg.jpg', caption: 'Fall colours' },
-  { src: 'lake-kayak.jpg', caption: 'Kayaking on Himbury Lake' },
-  { src: 'aerial-forest.jpg', caption: 'Highway 518 through the forest' },
+  { src: 'campsite.jpg', caption: 'Evergreen Grove campsite' },
+  { src: 'hiking.jpg', caption: 'Forest trails' },
+  { src: 'lake-kayak.jpg', caption: 'Kayaking adventures' },
+  { src: 'aerial-forest.jpg', caption: 'Aerial view of MYS Retreat' },
+  { src: 'cabin.jpg', caption: 'RV rentals' },
+  { src: 'hero-2.jpg', caption: 'RV sites' },
   { src: 'mitziville-cabin.jpg', caption: 'Cabins by Mitziville' },
-  { src: 'cabin.jpg', caption: 'RV sites at MYS' },
 ];
 
 const Gallery = () => {

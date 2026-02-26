@@ -20,6 +20,14 @@
   font-size: 0.8rem; font-weight: 700; letter-spacing: 0.3em;
   text-transform: uppercase; margin-bottom: var(--space-sm); opacity: 0.9;
 }
+.hero__retreat-name {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-sm);
+  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  color: var(--sand);
+}
 .hero__title {
   font-family: var(--font-display); font-weight: 500;
   font-size: clamp(2.5rem, 8vw, 5rem);
