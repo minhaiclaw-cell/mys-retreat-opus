@@ -1,0 +1,110 @@
+/* ── Navigation ── */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1.5rem 0;
+  transition: all var(--transition);
+}
+
+.nav--scrolled {
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 20px rgba(0,0,0,0.08);
+  padding: 0.75rem 0;
+}
+
+.nav__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo { background: none; border: none; cursor: pointer; }
+.nav__logo-img {
+  height: 44px;
+  filter: brightness(0) invert(1);
+  transition: filter var(--transition);
+}
+.nav--scrolled .nav__logo-img { filter: none; }
+
+.nav__links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__link {
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  transition: color var(--transition);
+  padding: 0.25rem 0;
+}
+
+.nav--scrolled .nav__link { color: var(--text-light); }
+.nav__link:hover { color: var(--white); }
+.nav--scrolled .nav__link:hover { color: var(--forest); }
+.nav__link--active { color: var(--white) !important; }
+.nav--scrolled .nav__link--active { color: var(--forest) !important; }
+
+.nav__indicator {
+  position: absolute;
+  bottom: -4px; left: 0; right: 0;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+.nav__mobile-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--white);
+  z-index: 110;
+}
+.nav--scrolled .nav__mobile-toggle { color: var(--forest); }
+
+.nav__mobile-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 105;
+  background: rgba(0,0,0,0.4);
+}
+
+.nav__mobile-panel {
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: 80%;
+  max-width: 360px;
+  background: var(--white);
+  padding: var(--space-xl) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.nav__mobile-link {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: var(--forest);
+  text-align: left;
+}
+
+.nav__mobile-contact {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+  .nav__links { display: none; }
+  .nav__mobile-toggle { display: block; }
+}

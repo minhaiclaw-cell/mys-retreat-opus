@@ -1,0 +1,37 @@
+/* ── App-level Layout ── */
+.app {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── Reusable Patterns ── */
+.section-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--pine);
+  margin-bottom: var(--space-sm);
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--forest);
+  line-height: 1.15;
+  margin-bottom: var(--space-md);
+}
+
+.section-body {
+  font-size: 1.125rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  max-width: 640px;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
