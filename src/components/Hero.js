@@ -22,7 +22,7 @@ const Hero = () => {
   return (
     <section id="home" className="hero">
       <motion.div className="hero__bg" style={{ y: bgY }}>
-        <img src={`${process.env.PUBLIC_URL}/aerial.jpg`} alt="" />
+        <img src={`${process.env.PUBLIC_URL}/hero-new.jpg`} alt="" />
       </motion.div>
       <div className="hero__overlay" />
 
@@ -44,8 +44,7 @@ const Hero = () => {
           <span className="hero__accent">in the Heart of Nature</span>
         </motion.h1>
         <motion.p className="hero__subtitle" variants={fadeUp}>
-          White sand beaches, pine forests, and Himbury Lake — your home away from home
-          since day one.
+          Where the wilderness meets the water — unforgettable moments on Himbury Lake.
         </motion.p>
         <motion.div className="hero__actions" variants={fadeUp}>
           <Link

@@ -1,4 +1,9 @@
-.experience { padding: var(--space-xl) 0 var(--space-2xl); background: var(--cream); }
+.experience { 
+  padding: var(--space-xl) 0 var(--space-2xl); 
+  background: linear-gradient(rgba(255, 252, 247, 0.9), rgba(255, 252, 247, 0.95)), 
+              url('../assets/adventure-bg.jpg') center/cover fixed;
+  position: relative;
+}
 .experience__header { text-align: center; margin-bottom: var(--space-xl); }
 .experience__header .section-body { margin: 0 auto; }
 

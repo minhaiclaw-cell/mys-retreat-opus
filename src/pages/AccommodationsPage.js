@@ -12,7 +12,7 @@ const AccommodationsPage = () => (
     transition={{ duration: 0.3 }}
   >
     <PageHero
-      image="aerial-forest.jpg"
+      image="rv-3.jpg"
       label="Accommodations"
       title="Find Your Perfect Stay"
       subtitle="From lakefront cottages to spacious RV sites — there's a place for everyone at MYS Retreat."

@@ -6,7 +6,7 @@ const stays = [
   {
     title: 'Cottages',
     price: '$125',
-    image: 'cottages.jpg',
+    image: 'cottage-peaceful.jpg',
     description: 'Fully furnished lakefront cottages with modern amenities, stunning views, and private decks.',
     features: ['Full Kitchen', 'WiFi', 'Fireplace', 'Private Deck', 'Lake View', 'Linens Provided'],
     featured: true,
@@ -43,7 +43,7 @@ const stays = [
 ];
 
 const Accommodations = ({ preview = false }) => {
-  const displayStays = preview ? stays.slice(0, 3) : stays;
+  const displayStays = stays; // Show all accommodations
 
   return (
     <section id="accommodations" className="accommodations">
