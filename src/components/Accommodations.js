@@ -32,6 +32,13 @@ const stays = [
     description: "Don't have an RV? No problem! Rent one of our fully-equipped RVs for the perfect experience.",
     features: ['Fully Equipped', 'Linens Included', 'Kitchenette', 'Pet Friendly'],
   },
+  {
+    title: 'Cabins',
+    price: '$150',
+    image: 'modular-cabin.jpg',
+    description: 'Modern modular cabins with floor-to-ceiling glass windows. Fully equipped with linens, kitchenette, and everything you need.',
+    features: ['Glass Windows', 'Full Linens', 'Kitchenette', 'Fully Equipped', 'Climate Control'],
+  },
 ];
 
 const Accommodations = () => (
@@ -64,7 +71,7 @@ const Accommodations = () => (
             transition={{ duration: 0.6, delay: i * 0.1 }}
           >
             <div className="stay-card__img">
-              <img src={`${process.env.PUBLIC_URL}/${stay.image}`} alt={stay.title} />
+              <img src={`${process.env.PUBLIC_URL}/${stay.image}`} alt={stay.title} loading="lazy" />
               <div className="stay-card__img-overlay" />
               <div className="stay-card__price-tag">
                 <span className="stay-card__price">{stay.price}</span>

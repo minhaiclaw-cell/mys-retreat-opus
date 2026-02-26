@@ -27,7 +27,7 @@ const Booking = () => (
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
         >
-          <img src={`${process.env.PUBLIC_URL}/fall-bg.jpg`} alt="Fall at MYS Retreat" />
+          <img src={`${process.env.PUBLIC_URL}/fall-bg.jpg`} alt="Fall at MYS Retreat" loading="lazy" />
         </motion.div>
 
         <motion.div className="booking__info"

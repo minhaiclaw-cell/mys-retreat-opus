@@ -40,7 +40,7 @@ const Experience = () => (
             transition={{ delay: i * 0.08, duration: 0.5 }}
           >
             <div className="act-card__image">
-              <img src={`${process.env.PUBLIC_URL}/${act.image}`} alt={act.title} />
+              <img src={`${process.env.PUBLIC_URL}/${act.image}`} alt={act.title} loading="lazy" />
             </div>
             <div className="act-card__content">
               <h3 className="act-card__title">{act.title}</h3>

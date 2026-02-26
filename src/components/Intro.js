@@ -55,10 +55,10 @@ const Intro = () => (
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className="intro__image intro__image--main">
-            <img src={`${process.env.PUBLIC_URL}/cabin.jpg`} alt="Lakefront cottage" />
+            <img src={`${process.env.PUBLIC_URL}/cabin.jpg`} alt="Lakefront cottage" loading="lazy" />
           </div>
           <div className="intro__image intro__image--accent">
-            <img src={`${process.env.PUBLIC_URL}/campfire.jpg`} alt="Campfire at sunset" />
+            <img src={`${process.env.PUBLIC_URL}/campfire.jpg`} alt="Campfire at sunset" loading="lazy" />
           </div>
         </motion.div>
       </div>

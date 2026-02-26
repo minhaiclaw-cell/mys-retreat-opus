@@ -87,6 +87,7 @@ const Gallery = () => {
                   src={`${process.env.PUBLIC_URL}/${img.src}`}
                   alt={img.caption}
                   className="gallery__image"
+                  loading="lazy"
                   draggable={false}
                 />
               </div>
