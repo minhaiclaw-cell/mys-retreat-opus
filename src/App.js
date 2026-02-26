@@ -9,6 +9,8 @@ import AccommodationsPage from './pages/AccommodationsPage';
 import ActivitiesPage from './pages/ActivitiesPage';
 import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
+import AboutPage from './pages/AboutPage';
+import FAQPage from './pages/FAQPage';
 import './App.css';
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
             <Route path="/accommodations" element={<AccommodationsPage />} />
             <Route path="/activities" element={<ActivitiesPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/faq" element={<FAQPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </AnimatePresence>

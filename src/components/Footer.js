@@ -57,7 +57,7 @@ const Footer = () => (
           <ul className="footer__links">
             {[
               ['Home', '/'], ['Stay', '/accommodations'], ['Activities', '/activities'],
-              ['Gallery', '/gallery'], ['Contact', '/contact']
+              ['Gallery', '/gallery'], ['About', '/about'], ['FAQ', '/faq'], ['Contact', '/contact']
             ].map(([label, path]) => (
               <li key={path}>
                 <Link to={path} className="footer__link">{label}</Link>
