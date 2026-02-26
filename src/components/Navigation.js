@@ -6,7 +6,7 @@ import './Navigation.css';
 const navItems = [
   { id: 'home', label: 'Home' },
   { id: 'accommodations', label: 'Stay' },
-  { id: 'experience', label: 'Experience' },
+  { id: 'experience', label: 'Activities' },
   { id: 'gallery', label: 'Gallery' },
   { id: 'booking', label: 'Book Now' },
 ];
@@ -36,11 +36,7 @@ const Navigation = ({ activeSection }) => {
       >
         <div className="nav__inner">
           <button className="nav__logo" onClick={() => scrollTo('home')}>
-            <img
-              src={`${process.env.PUBLIC_URL}/logo.png`}
-              alt="MYS Retreat"
-              className="nav__logo-img"
-            />
+            <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="MYS Retreat" className="nav__logo-img" />
           </button>
 
           <div className="nav__links">
@@ -68,7 +64,6 @@ const Navigation = ({ activeSection }) => {
         </div>
       </motion.nav>
 
-      {/* Mobile overlay */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -87,7 +82,7 @@ const Navigation = ({ activeSection }) => {
               {navItems.map((item, i) => (
                 <motion.button
                   key={item.id}
-                  initial={{ opacity: 0, x: 40 }}
+                  initial={{ opacity: 0, x: 30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.1 + i * 0.06 }}
                   onClick={() => scrollTo(item.id)}

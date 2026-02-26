@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Intro from './components/Intro';
 import Accommodations from './components/Accommodations';
 import Experience from './components/Experience';
+import Stats from './components/Stats';
 import Gallery from './components/Gallery';
 import Testimonials from './components/Testimonials';
 import Booking from './components/Booking';
@@ -18,18 +19,12 @@ function App() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
         });
       },
       { threshold: 0.3 }
     );
-
-    document.querySelectorAll('section[id]').forEach((section) => {
-      observer.observe(section);
-    });
-
+    document.querySelectorAll('section[id]').forEach((s) => observer.observe(s));
     return () => observer.disconnect();
   }, []);
 
@@ -41,6 +36,7 @@ function App() {
         <Intro />
         <Accommodations />
         <Experience />
+        <Stats />
         <Gallery />
         <Testimonials />
         <Booking />

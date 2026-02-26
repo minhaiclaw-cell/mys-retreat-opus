@@ -26,13 +26,13 @@
   align-items: center;
   justify-content: center;
   font-size: 1rem;
-  color: var(--forest);
+  color: var(--brand-dark);
   transition: all var(--transition);
 }
 .gallery__arrow:hover:not(.gallery__arrow--disabled) {
-  background: var(--forest);
+  background: var(--brand-dark);
   color: var(--white);
-  border-color: var(--forest);
+  border-color: var(--brand-dark);
 }
 .gallery__arrow--disabled {
   opacity: 0.3;
@@ -101,7 +101,7 @@
   transition: all var(--transition);
 }
 .gallery__dot--active {
-  background: var(--forest);
+  background: var(--brand-dark);
   width: 24px;
   border-radius: 4px;
 }

@@ -1,69 +1,56 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaFish, FaHiking, FaWater, FaFire, FaCamera, FaSnowflake } from 'react-icons/fa';
 import './Experience.css';
 
 const activities = [
-  { icon: FaFish, title: 'Fishing', desc: 'Bass, pike, and trout in pristine Himbury Lake' },
-  { icon: FaHiking, title: 'Hiking', desc: 'Trails through forests and along lakefront bluffs' },
-  { icon: FaWater, title: 'Kayaking', desc: 'Explore hidden coves and calm crystal waters' },
-  { icon: FaFire, title: 'Campfires', desc: 'Nightly gatherings with stargazing overhead' },
-  { icon: FaCamera, title: 'Wildlife', desc: 'Moose, loons, eagles — all in their habitat' },
-  { icon: FaSnowflake, title: 'Four Seasons', desc: 'Every season brings a new kind of magic' },
+  { image: 'campfire.jpg', title: 'Campfires', desc: 'Ignite your evenings with nightly campfire gatherings. Share stories, roast marshmallows, and make lasting memories.' },
+  { image: 'hiking.jpg', title: 'Hiking', desc: 'Embrace the wilderness with year-round trekking through pine forests and along lakefront bluffs.' },
+  { image: 'fishing.jpg', title: 'Fishing', desc: 'Cast away your worries — excellent bass, pike, and trout fishing right from our dock on Himbury Lake.' },
+  { image: 'kayaking.jpg', title: 'Kayaking & Canoeing', desc: 'Paddle into paradise. Explore hidden coves and enjoy the tranquility of nature from the water.' },
+  { image: 'hero-bg.jpg', title: 'White Sand Beach', desc: 'Relax on our exclusive white sand beach with pristine lakefront access. Perfect for families and swimming.' },
 ];
 
-const Experience = () => {
-  return (
-    <section id="experience" className="experience">
-      <div className="container">
-        <motion.div
-          className="experience__header"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <p className="section-label">Experience</p>
-          <h2 className="section-heading">More than a destination</h2>
-          <p className="section-body">
-            Adventure on the water, quiet moments by the fire, or simply the sound
-            of wind through the pines.
-          </p>
-        </motion.div>
+const Experience = () => (
+  <section id="experience" className="experience">
+    <div className="container">
+      <motion.div
+        className="experience__header"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <p className="section-label">Activities</p>
+        <h2 className="section-heading">
+          Camping <span className="accent">Adventures</span>
+        </h2>
+        <p className="section-body">
+          Adventure awaits at every turn. Explore our wide range of outdoor
+          activities for all ages.
+        </p>
+      </motion.div>
 
-        {/* Full-width image break */}
-        <motion.div
-          className="experience__hero-image"
-          initial={{ opacity: 0, scale: 0.97 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-        >
-          <img src={`${process.env.PUBLIC_URL}/kayaking.jpg`} alt="Kayaking on Himbury Lake" />
-        </motion.div>
-
-        {/* Activity cards */}
-        <div className="experience__grid">
-          {activities.map((act, i) => {
-            const Icon = act.icon;
-            return (
-              <motion.div
-                key={act.title}
-                className="activity-card"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.07, duration: 0.5 }}
-                whileHover={{ y: -4 }}
-              >
-                <div className="activity-card__icon"><Icon /></div>
-                <h3 className="activity-card__title">{act.title}</h3>
-                <p className="activity-card__desc">{act.desc}</p>
-              </motion.div>
-            );
-          })}
-        </div>
+      <div className="experience__grid">
+        {activities.map((act, i) => (
+          <motion.div
+            key={act.title}
+            className="act-card"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.08, duration: 0.5 }}
+          >
+            <div className="act-card__image">
+              <img src={`${process.env.PUBLIC_URL}/${act.image}`} alt={act.title} />
+            </div>
+            <div className="act-card__content">
+              <h3 className="act-card__title">{act.title}</h3>
+              <p className="act-card__desc">{act.desc}</p>
+            </div>
+          </motion.div>
+        ))}
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default Experience;

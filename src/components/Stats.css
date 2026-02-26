@@ -1,0 +1,16 @@
+.stats { padding: var(--space-xl) 0; background: var(--cream); }
+
+.stats__inner {
+  display: grid; grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-xl); align-items: center;
+}
+
+.stats__map {
+  border-radius: var(--radius); overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+.stats__map img { width: 100%; height: auto; display: block; }
+
+@media (max-width: 768px) {
+  .stats__inner { grid-template-columns: 1fr; }
+}

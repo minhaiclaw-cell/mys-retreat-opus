@@ -11,12 +11,8 @@ const Hero = () => {
 
   const stagger = {
     hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15, delayChildren: 0.4 },
-    },
+    show: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.3 } },
   };
-
   const fadeUp = {
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] } },
@@ -24,13 +20,11 @@ const Hero = () => {
 
   return (
     <section id="home" className="hero">
-      {/* Parallax background */}
       <motion.div className="hero__bg" style={{ y: bgY }}>
         <img src={`${process.env.PUBLIC_URL}/aerial.jpg`} alt="" />
       </motion.div>
       <div className="hero__overlay" />
 
-      {/* Content */}
       <motion.div
         className="hero__content"
         style={{ opacity: contentOpacity, y: contentY }}
@@ -42,12 +36,12 @@ const Hero = () => {
           Kearney, Ontario
         </motion.p>
         <motion.h1 className="hero__title" variants={fadeUp}>
-          MYS Retreat
+          A Family Campground<br />
+          <span className="hero__accent">in the Heart of Nature</span>
         </motion.h1>
         <motion.p className="hero__subtitle" variants={fadeUp}>
-          White sand beaches meet pristine wilderness on Himbury Lake.
-          <br />
-          Your sanctuary awaits.
+          White sand beaches, pine forests, and Himbury Lake — your home away from home
+          since day one.
         </motion.p>
         <motion.div className="hero__actions" variants={fadeUp}>
           <button
@@ -58,20 +52,20 @@ const Hero = () => {
           </button>
           <button
             className="hero__btn hero__btn--ghost"
-            onClick={() => document.getElementById('accommodations')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Explore
+            Explore Activities
           </button>
         </motion.div>
       </motion.div>
 
-      {/* Scroll cue */}
       <motion.div
         className="hero__scroll-cue"
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2.5, ease: 'easeInOut' }}
         onClick={() => document.getElementById('intro')?.scrollIntoView({ behavior: 'smooth' })}
       >
+        <span className="hero__scroll-text">Scroll to explore</span>
         <FaChevronDown />
       </motion.div>
     </section>

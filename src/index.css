@@ -1,22 +1,32 @@
-/* ── Reset & Base ── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --forest: #2c4a3e;
-  --pine: #3d7a5f;
-  --lake: #4a7c9e;
-  --sand: #f7f3ee;
-  --sand-dark: #ede7df;
+  /* Brand palette — anchored to the logo teal-green */
+  --brand: #3a6b5e;
+  --brand-dark: #2c5248;
+  --brand-light: #4d8a7a;
+  --brand-muted: #5a9e8c;
+
+  /* Supporting nature tones */
+  --bark: #6b5a4e;
   --sunset: #d4896b;
+  --lake: #5a93ad;
+
+  /* Neutrals */
   --cream: #faf8f5;
+  --sand: #f0ebe4;
+  --sand-dark: #e2dbd1;
   --white: #ffffff;
   --text: #3a3a3a;
-  --text-light: #777777;
-  --text-muted: #aaaaaa;
+  --text-light: #6e6e6e;
+  --text-muted: #a0a0a0;
 
+  /* Typography */
   --font-body: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-display: 'Fraunces', Georgia, serif;
+  --font-accent: 'Caveat', cursive;
 
+  /* Spacing */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 2rem;
@@ -26,7 +36,8 @@
 
   --max-width: 1200px;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --radius: 12px;
+  --radius: 16px;
+  --radius-sm: 10px;
 }
 
 html { scroll-behavior: smooth; }
@@ -34,9 +45,8 @@ html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-body);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   background: var(--cream);
 }
@@ -45,9 +55,7 @@ img { display: block; max-width: 100%; }
 a { text-decoration: none; color: inherit; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
 ul { list-style: none; }
-
-::selection { background: var(--pine); color: var(--white); }
-
+::selection { background: var(--brand); color: var(--white); }
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--cream); }
-::-webkit-scrollbar-thumb { background: var(--pine); border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: var(--brand-muted); border-radius: 4px; }

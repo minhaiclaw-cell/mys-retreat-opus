@@ -2,78 +2,54 @@ import React from 'react';
 import { FaFacebook, FaInstagram, FaPhone, FaEnvelope } from 'react-icons/fa';
 import './Footer.css';
 
-const Footer = () => {
-  return (
-    <footer className="footer">
-      <div className="container">
-        <div className="footer__grid">
-          <div className="footer__brand">
-            <img
-              src={`${process.env.PUBLIC_URL}/logo.png`}
-              alt="MYS Retreat"
-              className="footer__logo"
-            />
-            <p className="footer__tagline">
-              Your sanctuary on Himbury Lake.<br />
-              Kearney, Ontario.
-            </p>
-          </div>
-
-          <div className="footer__col">
-            <h4 className="footer__heading">Quick Links</h4>
-            <ul className="footer__links">
-              {['Home', 'Stay', 'Experience', 'Gallery', 'Book Now'].map((label) => (
-                <li key={label}>
-                  <button
-                    className="footer__link"
-                    onClick={() => {
-                      const id = label === 'Stay' ? 'accommodations'
-                        : label === 'Book Now' ? 'booking'
-                        : label.toLowerCase();
-                      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-                    }}
-                  >
-                    {label}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="footer__col">
-            <h4 className="footer__heading">Contact</h4>
-            <ul className="footer__links">
-              <li>
-                <a href="tel:2498888980" className="footer__link">
-                  <FaPhone style={{ marginRight: 8 }} /> (249) 888-8980
-                </a>
-              </li>
-              <li>
-                <a href="mailto:info@mysretreat.com" className="footer__link">
-                  <FaEnvelope style={{ marginRight: 8 }} /> info@mysretreat.com
-                </a>
-              </li>
-              <li className="footer__link" style={{ cursor: 'default' }}>
-                2900 Highway 518<br />Kearney, ON P0A 1M0
-              </li>
-            </ul>
-          </div>
-
-          <div className="footer__col">
-            <h4 className="footer__heading">Follow Us</h4>
-            <div className="footer__social">
-              <a href="#" className="footer__social-link" aria-label="Facebook"><FaFacebook /></a>
-              <a href="#" className="footer__social-link" aria-label="Instagram"><FaInstagram /></a>
-            </div>
-          </div>
+const Footer = () => (
+  <footer className="footer">
+    <div className="container">
+      <div className="footer__grid">
+        <div className="footer__brand">
+          <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="MYS Retreat" className="footer__logo" />
+          <p className="footer__tagline">Your home away from home on Himbury Lake.<br />Kearney, Ontario.</p>
         </div>
 
-        <div className="footer__bottom">
-          <p>&copy; 2026 MYS Retreat. All rights reserved.</p>
+        <div className="footer__col">
+          <h4 className="footer__heading">Quick Links</h4>
+          <ul className="footer__links">
+            {[
+              ['Home', 'home'], ['Stay', 'accommodations'], ['Activities', 'experience'],
+              ['Gallery', 'gallery'], ['Book Now', 'booking']
+            ].map(([label, id]) => (
+              <li key={id}>
+                <button className="footer__link" onClick={() =>
+                  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+                }>{label}</button>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="footer__col">
+          <h4 className="footer__heading">Contact</h4>
+          <ul className="footer__links">
+            <li><a href="tel:2498888980" className="footer__link"><FaPhone style={{ marginRight: 8 }} /> (249) 888-8980</a></li>
+            <li><a href="mailto:info@mysretreat.com" className="footer__link"><FaEnvelope style={{ marginRight: 8 }} /> info@mysretreat.com</a></li>
+            <li className="footer__link" style={{ cursor: 'default' }}>2900 Highway 518, Kearney, ON</li>
+          </ul>
+        </div>
+
+        <div className="footer__col">
+          <h4 className="footer__heading">Follow Us</h4>
+          <div className="footer__social">
+            <a href="#" className="footer__social-link" aria-label="Facebook"><FaFacebook /></a>
+            <a href="#" className="footer__social-link" aria-label="Instagram"><FaInstagram /></a>
+          </div>
         </div>
       </div>
-    </footer>
-  );
-};
+
+      <div className="footer__bottom">
+        <p>&copy; 2026 MYS Retreat. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+);
 
 export default Footer;
