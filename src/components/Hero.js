@@ -44,15 +44,20 @@ const Hero = () => {
           since day one.
         </motion.p>
         <motion.div className="hero__actions" variants={fadeUp}>
-          <button
+          <a
             className="hero__btn hero__btn--primary"
-            onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
+            href="https://www.fireflybookings.com"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Book Your Stay
-          </button>
+          </a>
           <button
             className="hero__btn hero__btn--ghost"
-            onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => {
+              const el = document.getElementById('experience') || document.getElementById('intro');
+              el?.scrollIntoView({ behavior: 'smooth' });
+            }}
           >
             Explore Activities
           </button>

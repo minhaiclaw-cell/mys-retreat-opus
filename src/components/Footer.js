@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaPhone, FaEnvelope } from 'react-icons/fa';
 import './Footer.css';
 
@@ -15,15 +16,16 @@ const Footer = () => (
           <h4 className="footer__heading">Quick Links</h4>
           <ul className="footer__links">
             {[
-              ['Home', 'home'], ['Stay', 'accommodations'], ['Activities', 'experience'],
-              ['Gallery', 'gallery'], ['Book Now', 'booking']
-            ].map(([label, id]) => (
-              <li key={id}>
-                <button className="footer__link" onClick={() =>
-                  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-                }>{label}</button>
+              ['Home', '/'], ['Stay', '/accommodations'], ['Activities', '/activities'],
+              ['Gallery', '/gallery'], ['Contact', '/contact']
+            ].map(([label, path]) => (
+              <li key={path}>
+                <Link to={path} className="footer__link">{label}</Link>
               </li>
             ))}
+            <li>
+              <a href="https://www.fireflybookings.com" target="_blank" rel="noopener noreferrer" className="footer__link">Book Now</a>
+            </li>
           </ul>
         </div>
 

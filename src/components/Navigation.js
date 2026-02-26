@@ -1,30 +1,27 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './Navigation.css';
 
 const navItems = [
-  { id: 'home', label: 'Home' },
-  { id: 'accommodations', label: 'Stay' },
-  { id: 'experience', label: 'Activities' },
-  { id: 'gallery', label: 'Gallery' },
-  { id: 'booking', label: 'Book Now' },
+  { path: '/', label: 'Home' },
+  { path: '/accommodations', label: 'Stay' },
+  { path: '/activities', label: 'Activities' },
+  { path: '/gallery', label: 'Gallery' },
+  { path: '/contact', label: 'Contact' },
 ];
 
-const Navigation = ({ activeSection }) => {
+const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-
-  const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-    setMenuOpen(false);
-  };
 
   return (
     <>
@@ -35,27 +32,35 @@ const Navigation = ({ activeSection }) => {
         className={`nav ${scrolled ? 'nav--scrolled' : ''}`}
       >
         <div className="nav__inner">
-          <button className="nav__logo" onClick={() => scrollTo('home')}>
+          <Link to="/" className="nav__logo">
             <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="MYS Retreat" className="nav__logo-img" />
-          </button>
+          </Link>
 
           <div className="nav__links">
             {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollTo(item.id)}
-                className={`nav__link ${activeSection === item.id ? 'nav__link--active' : ''}`}
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`nav__link ${location.pathname === item.path ? 'nav__link--active' : ''}`}
               >
                 {item.label}
-                {activeSection === item.id && (
+                {location.pathname === item.path && (
                   <motion.span
                     layoutId="nav-indicator"
                     className="nav__indicator"
                     transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                   />
                 )}
-              </button>
+              </Link>
             ))}
+            <a
+              href="https://www.fireflybookings.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav__link nav__link--cta"
+            >
+              Book Now
+            </a>
           </div>
 
           <button className="nav__mobile-toggle" onClick={() => setMenuOpen(!menuOpen)}>
@@ -80,17 +85,36 @@ const Navigation = ({ activeSection }) => {
               className="nav__mobile-panel"
             >
               {navItems.map((item, i) => (
-                <motion.button
-                  key={item.id}
+                <motion.div
+                  key={item.path}
                   initial={{ opacity: 0, x: 30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.1 + i * 0.06 }}
-                  onClick={() => scrollTo(item.id)}
-                  className="nav__mobile-link"
                 >
-                  {item.label}
-                </motion.button>
+                  <Link
+                    to={item.path}
+                    onClick={() => setMenuOpen(false)}
+                    className="nav__mobile-link"
+                  >
+                    {item.label}
+                  </Link>
+                </motion.div>
               ))}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1 + navItems.length * 0.06 }}
+              >
+                <a
+                  href="https://www.fireflybookings.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="nav__mobile-link nav__mobile-link--cta"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Book Now
+                </a>
+              </motion.div>
               <div className="nav__mobile-contact">
                 <a href="tel:2498888980">(249) 888-8980</a>
                 <a href="mailto:info@mysretreat.com">info@mysretreat.com</a>

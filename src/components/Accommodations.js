@@ -33,72 +33,90 @@ const stays = [
     features: ['Fully Equipped', 'Linens Included', 'Kitchenette', 'Pet Friendly'],
   },
   {
-    title: 'Cabins',
-    price: '$150',
-    image: 'modular-cabin.jpg',
-    description: 'Modern modular cabins with floor-to-ceiling glass windows. Fully equipped with linens, kitchenette, and everything you need.',
-    features: ['Glass Windows', 'Full Linens', 'Kitchenette', 'Fully Equipped', 'Climate Control'],
+    title: 'Cabins by Mitziville',
+    price: 'View',
+    image: 'mitziville-cabin.jpg',
+    description: 'Modern modular cabin pods with floor-to-ceiling glass windows, full linens, and kitchenette. Operated by our partners at Mitziville.',
+    features: ['Glass Windows', 'Full Linens', 'Kitchenette', 'Fully Equipped', 'Private Deck'],
+    external: 'https://www.mitziville.com/',
   },
 ];
 
-const Accommodations = () => (
-  <section id="accommodations" className="accommodations">
-    <div className="container">
-      <motion.div
-        className="accommodations__header"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-      >
-        <p className="section-label">Stay</p>
-        <h2 className="section-heading">
-          Choose Your <span className="accent">Experience</span>
-        </h2>
-        <p className="section-body">
-          From cozy cottages to spacious RV sites — we have the perfect spot
-          for your Ontario camping getaway.
-        </p>
-      </motion.div>
+const Accommodations = ({ preview = false }) => {
+  const displayStays = preview ? stays.slice(0, 3) : stays;
 
-      <div className="accommodations__grid">
-        {stays.map((stay, i) => (
-          <motion.article
-            key={stay.title}
-            className={`stay-card ${stay.featured ? 'stay-card--featured' : ''}`}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: i * 0.1 }}
-          >
-            <div className="stay-card__img">
-              <img src={`${process.env.PUBLIC_URL}/${stay.image}`} alt={stay.title} loading="lazy" />
-              <div className="stay-card__img-overlay" />
-              <div className="stay-card__price-tag">
-                <span className="stay-card__price">{stay.price}</span>
-                <span className="stay-card__per">/night</span>
+  return (
+    <section id="accommodations" className="accommodations">
+      <div className="container">
+        <motion.div
+          className="accommodations__header"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <p className="section-label">Stay</p>
+          <h2 className="section-heading">
+            Choose Your <span className="accent">Experience</span>
+          </h2>
+          <p className="section-body">
+            From cozy cottages to spacious RV sites — we have the perfect spot
+            for your Ontario camping getaway.
+          </p>
+        </motion.div>
+
+        <div className={`accommodations__grid ${preview ? 'accommodations__grid--preview' : ''}`}>
+          {displayStays.map((stay, i) => (
+            <motion.article
+              key={stay.title}
+              className={`stay-card ${stay.featured ? 'stay-card--featured' : ''}`}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+            >
+              <div className="stay-card__img">
+                <img src={`${process.env.PUBLIC_URL}/${stay.image}`} alt={stay.title} loading="lazy" />
+                <div className="stay-card__img-overlay" />
+                <div className="stay-card__price-tag">
+                  <span className="stay-card__price">{stay.price}</span>
+                  {stay.price !== 'View' && <span className="stay-card__per">/night</span>}
+                </div>
               </div>
-            </div>
 
-            <div className="stay-card__body">
-              <h3 className="stay-card__title">{stay.title}</h3>
-              <p className="stay-card__desc">{stay.description}</p>
-              <ul className="stay-card__features">
-                {stay.features.map((f) => (
-                  <li key={f}><span className="stay-card__dot" />{f}</li>
-                ))}
-              </ul>
-              <button
-                className="stay-card__cta"
-                onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Book Now →
-              </button>
-            </div>
-          </motion.article>
-        ))}
+              <div className="stay-card__body">
+                <h3 className="stay-card__title">{stay.title}</h3>
+                <p className="stay-card__desc">{stay.description}</p>
+                <ul className="stay-card__features">
+                  {stay.features.map((f) => (
+                    <li key={f}><span className="stay-card__dot" />{f}</li>
+                  ))}
+                </ul>
+                {stay.external ? (
+                  <a
+                    href={stay.external}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="stay-card__cta"
+                  >
+                    Visit Mitziville →
+                  </a>
+                ) : (
+                  <a
+                    href="https://www.fireflybookings.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="stay-card__cta"
+                  >
+                    Book Now →
+                  </a>
+                )}
+              </div>
+            </motion.article>
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Accommodations;

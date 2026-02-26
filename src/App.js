@@ -1,48 +1,34 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Navigation from './components/Navigation';
-import Hero from './components/Hero';
-import Intro from './components/Intro';
-import Accommodations from './components/Accommodations';
-import Experience from './components/Experience';
-import Stats from './components/Stats';
-import Gallery from './components/Gallery';
-import Testimonials from './components/Testimonials';
-import Booking from './components/Booking';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+import HomePage from './pages/HomePage';
+import AccommodationsPage from './pages/AccommodationsPage';
+import ActivitiesPage from './pages/ActivitiesPage';
+import GalleryPage from './pages/GalleryPage';
+import ContactPage from './pages/ContactPage';
 import './App.css';
 
 function App() {
-  const [activeSection, setActiveSection] = useState('home');
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActiveSection(entry.target.id);
-        });
-      },
-      { threshold: 0.3 }
-    );
-    document.querySelectorAll('section[id]').forEach((s) => observer.observe(s));
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <AnimatePresence>
+    <Router>
+      <ScrollToTop />
       <div className="app">
-        <Navigation activeSection={activeSection} />
-        <Hero />
-        <Intro />
-        <Accommodations />
-        <Experience />
-        <Stats />
-        <Gallery />
-        <Testimonials />
-        <Booking />
+        <Navigation />
+        <AnimatePresence mode="wait">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/accommodations" element={<AccommodationsPage />} />
+            <Route path="/activities" element={<ActivitiesPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        </AnimatePresence>
         <Footer />
       </div>
-    </AnimatePresence>
+    </Router>
   );
 }
 

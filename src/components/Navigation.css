@@ -57,6 +57,22 @@
   margin-top: auto; display: flex; flex-direction: column; gap: 0.5rem;
   font-size: 0.9rem; color: var(--text-light);
 }
+.nav__link--cta {
+  background: var(--brand); color: var(--white) !important;
+  padding: 0.5rem 1.25rem; border-radius: 6px;
+  letter-spacing: 0.06em;
+}
+.nav__link--cta:hover { background: var(--brand-dark); color: var(--white) !important; }
+.nav--scrolled .nav__link--cta { background: var(--brand); color: var(--white) !important; }
+.nav--scrolled .nav__link--cta:hover { background: var(--brand-dark); }
+
+.nav__mobile-link--cta {
+  color: var(--brand) !important; font-weight: 600;
+}
+
+.nav__link { text-decoration: none; }
+.nav__mobile-link { text-decoration: none; display: block; }
+
 @media (max-width: 768px) {
   .nav__links { display: none; }
   .nav__mobile-toggle { display: block; }
