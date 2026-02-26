@@ -1,0 +1,96 @@
+.booking-widget {
+  max-width: 900px;
+  margin: -3rem auto 0;
+  position: relative;
+  z-index: 5;
+  padding: 0 var(--space-md);
+}
+
+.booking-widget__inner {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.booking-widget__field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.booking-widget__label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.booking-widget__input {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--brand-dark);
+  background: var(--sand);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+  transition: border-color var(--transition);
+  width: 100%;
+}
+
+.booking-widget__input:focus {
+  outline: none;
+  border-color: var(--brand);
+}
+
+.booking-widget__select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2rem;
+}
+
+.booking-widget__divider {
+  width: 1px;
+  height: 40px;
+  background: var(--sand);
+  flex-shrink: 0;
+}
+
+.booking-widget__btn {
+  flex-shrink: 0;
+  background: var(--brand);
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.75rem;
+  border-radius: 8px;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.booking-widget__btn:hover {
+  background: var(--brand-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(58,107,94,0.3);
+}
+
+@media (max-width: 768px) {
+  .booking-widget { margin-top: -2rem; }
+  .booking-widget__inner {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.25rem 1.5rem;
+  }
+  .booking-widget__divider { display: none; }
+  .booking-widget__btn { width: 100%; text-align: center; }
+}

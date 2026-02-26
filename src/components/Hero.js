@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { FaChevronDown } from 'react-icons/fa';
 import './Hero.css';
@@ -44,14 +45,12 @@ const Hero = () => {
           since day one.
         </motion.p>
         <motion.div className="hero__actions" variants={fadeUp}>
-          <a
+          <Link
             className="hero__btn hero__btn--primary"
-            href="https://www.fireflybookings.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            to="/accommodations"
           >
             Book Your Stay
-          </a>
+          </Link>
           <button
             className="hero__btn hero__btn--ghost"
             onClick={() => {

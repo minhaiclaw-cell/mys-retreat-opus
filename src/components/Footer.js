@@ -1,7 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaPhone, FaEnvelope } from 'react-icons/fa';
 import './Footer.css';
+
+const Newsletter = () => {
+  const [email, setEmail] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (email) {
+      // TODO: integrate with email service (Mailchimp, etc.)
+      setSubmitted(true);
+      setEmail('');
+    }
+  };
+
+  return (
+    <div className="footer__newsletter">
+      <h4 className="footer__heading">Stay Connected</h4>
+      <p className="footer__newsletter-text">
+        Get updates on seasonal events, promotions, and campground news.
+      </p>
+      {submitted ? (
+        <p className="footer__newsletter-thanks">Thanks for subscribing! 🌲</p>
+      ) : (
+        <form className="footer__newsletter-form" onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Your email address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="footer__newsletter-input"
+            required
+          />
+          <button type="submit" className="footer__newsletter-btn">
+            Subscribe
+          </button>
+        </form>
+      )}
+    </div>
+  );
+};
 
 const Footer = () => (
   <footer className="footer">
@@ -23,9 +63,6 @@ const Footer = () => (
                 <Link to={path} className="footer__link">{label}</Link>
               </li>
             ))}
-            <li>
-              <a href="https://www.fireflybookings.com" target="_blank" rel="noopener noreferrer" className="footer__link">Book Now</a>
-            </li>
           </ul>
         </div>
 
@@ -36,15 +73,13 @@ const Footer = () => (
             <li><a href="mailto:info@mysretreat.com" className="footer__link"><FaEnvelope style={{ marginRight: 8 }} /> info@mysretreat.com</a></li>
             <li className="footer__link" style={{ cursor: 'default' }}>2900 Highway 518, Kearney, ON</li>
           </ul>
-        </div>
-
-        <div className="footer__col">
-          <h4 className="footer__heading">Follow Us</h4>
-          <div className="footer__social">
+          <div className="footer__social" style={{ marginTop: '1rem' }}>
             <a href="#" className="footer__social-link" aria-label="Facebook"><FaFacebook /></a>
             <a href="#" className="footer__social-link" aria-label="Instagram"><FaInstagram /></a>
           </div>
         </div>
+
+        <Newsletter />
       </div>
 
       <div className="footer__bottom">

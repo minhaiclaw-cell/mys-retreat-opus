@@ -10,8 +10,10 @@ const images = [
   { src: 'fishing.jpg', caption: 'Fishing on Himbury Lake' },
   { src: 'hiking.jpg', caption: 'Hiking the trails' },
   { src: 'fall-bg.jpg', caption: 'Fall colours' },
-  { src: 'kayaking.jpg', caption: 'Kayaking adventures' },
-  { src: 'cabin.jpg', caption: 'Cozy cabin interiors' },
+  { src: 'lake-kayak.jpg', caption: 'Kayaking on Himbury Lake' },
+  { src: 'aerial-forest.jpg', caption: 'Highway 518 through the forest' },
+  { src: 'mitziville-cabin.jpg', caption: 'Cabins by Mitziville' },
+  { src: 'cabin.jpg', caption: 'RV sites at MYS' },
 ];
 
 const Gallery = () => {

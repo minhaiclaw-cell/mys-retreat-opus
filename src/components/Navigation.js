@@ -53,14 +53,12 @@ const Navigation = () => {
                 )}
               </Link>
             ))}
-            <a
-              href="https://www.fireflybookings.com"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/accommodations"
               className="nav__link nav__link--cta"
             >
               Book Now
-            </a>
+            </Link>
           </div>
 
           <button className="nav__mobile-toggle" onClick={() => setMenuOpen(!menuOpen)}>
@@ -105,15 +103,13 @@ const Navigation = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.1 + navItems.length * 0.06 }}
               >
-                <a
-                  href="https://www.fireflybookings.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/accommodations"
                   className="nav__mobile-link nav__mobile-link--cta"
                   onClick={() => setMenuOpen(false)}
                 >
                   Book Now
-                </a>
+                </Link>
               </motion.div>
               <div className="nav__mobile-contact">
                 <a href="tel:2498888980">(249) 888-8980</a>

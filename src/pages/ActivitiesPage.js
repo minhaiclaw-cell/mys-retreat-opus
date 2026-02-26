@@ -11,7 +11,7 @@ const ActivitiesPage = () => (
     transition={{ duration: 0.3 }}
   >
     <PageHero
-      image="kayaking.jpg"
+      image="lake-kayak.jpg"
       label="Activities"
       title="Adventure Awaits"
       subtitle="From lakeside fishing to forest hikes — experience the best of Ontario's great outdoors."

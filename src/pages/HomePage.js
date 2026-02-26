@@ -34,14 +34,9 @@ const HomePage = () => (
         <p className="section-body" style={{ margin: '0 auto 2rem', maxWidth: 500 }}>
           Book your stay at MYS Retreat and experience the magic of Himbury Lake.
         </p>
-        <a
-          href="https://www.fireflybookings.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn--primary"
-        >
-          Book Now
-        </a>
+        <Link to="/accommodations" className="btn btn--primary">
+          Find Your Stay
+        </Link>
       </div>
     </section>
   </motion.main>
