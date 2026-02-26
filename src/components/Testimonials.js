@@ -31,32 +31,30 @@ const Testimonials = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <p className="section-label" style={{ color: 'var(--sunset)' }}>Testimonials</p>
-          <h2 className="section-heading" style={{ color: 'var(--white)' }}>
-            What guests are saying
-          </h2>
+          <p className="section-label">Testimonials</p>
+          <h2 className="section-heading">What guests are saying</h2>
         </motion.div>
+      </div>
 
-        <div className="testimonials__grid">
-          {reviews.map((review, i) => (
-            <motion.blockquote
-              key={i}
-              className="review"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.12 }}
-            >
-              <div className="review__stars">
-                {[...Array(review.rating)].map((_, j) => (
-                  <FaStar key={j} />
-                ))}
-              </div>
-              <p className="review__text">"{review.text}"</p>
-              <cite className="review__author">{review.name}</cite>
-            </motion.blockquote>
-          ))}
-        </div>
+      <div className="testimonials__grid">
+        {reviews.map((review, i) => (
+          <motion.blockquote
+            key={i}
+            className="review"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.1 }}
+          >
+            <div className="review__stars">
+              {[...Array(review.rating)].map((_, j) => (
+                <FaStar key={j} />
+              ))}
+            </div>
+            <p className="review__text">"{review.text}"</p>
+            <cite className="review__author">{review.name}</cite>
+          </motion.blockquote>
+        ))}
       </div>
     </section>
   );

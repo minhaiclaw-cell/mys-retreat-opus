@@ -1,70 +1,74 @@
 .experience {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 700px;
+  padding: var(--space-xl) 0 var(--space-2xl);
+  background: var(--cream);
 }
 
-.experience__image {
-  position: relative;
-  overflow: hidden;
+.experience__header {
+  text-align: center;
+  margin-bottom: var(--space-lg);
 }
-.experience__image img {
+.experience__header .section-body { margin: 0 auto; }
+
+.experience__hero-image {
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: var(--space-xl);
+  max-height: 420px;
+}
+.experience__hero-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.experience__content {
-  background: var(--forest);
-  padding: var(--space-xl);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .experience__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-top: var(--space-lg);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
 }
 
-.exp-item {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-  cursor: default;
+.activity-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.activity-card:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
 }
 
-.exp-item__icon {
-  width: 44px;
-  height: 44px;
+.activity-card__icon {
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  background: var(--pine);
-  display: flex;
+  background: var(--sand);
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  color: var(--sand);
-  font-size: 1.1rem;
+  color: var(--pine);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
 }
 
-.exp-item__title {
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--white);
-  margin-bottom: 0.25rem;
+.activity-card__title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--forest);
+  margin-bottom: 0.4rem;
 }
 
-.exp-item__desc {
-  font-size: 0.85rem;
-  color: rgba(244, 235, 225, 0.7);
-  line-height: 1.5;
+.activity-card__desc {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.6;
 }
 
 @media (max-width: 768px) {
-  .experience { grid-template-columns: 1fr; }
-  .experience__image { height: 300px; }
-  .experience__content { padding: var(--space-lg) var(--space-md); }
+  .experience__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
   .experience__grid { grid-template-columns: 1fr; }
 }
