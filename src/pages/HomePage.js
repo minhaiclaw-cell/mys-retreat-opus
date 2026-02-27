@@ -64,14 +64,13 @@ const HomePage = () => (
           viewport={{ once: true }}
           style={{ textAlign: 'center', marginBottom: 'var(--space-lg)' }}
         >
-          <p className="section-label">Seasonal Camping Ontario</p>
+          <p className="section-label">Extended Stays</p>
           <h2 className="section-heading">
-            Seasonal RV & Tent <span className="accent">Sites Near Toronto</span>
+            Seasonal <span className="accent">Site Rentals</span>
           </h2>
           <p className="section-body" style={{ margin: '0 auto' }}>
-            Book your seasonal camping site in Ontario for the 2026 season. Affordable seasonal RV sites 
-            and tent camping rentals from May through October — the perfect alternative to crowded 
-            national parks with flexible availability and family-friendly rates.
+            Make MYS Retreat your home away from home all season long. We offer seasonal site rentals 
+            for both tent camping and RV sites from May through October, near Algonquin Park.
           </p>
         </motion.div>
 
@@ -91,8 +90,8 @@ const HomePage = () => (
                   <path d="M7 16H17" stroke="var(--brand)" strokeWidth="1.5" strokeLinecap="round"/>
                 </svg>
               ),
-              title: 'Seasonal Tent Camping Sites',
-              desc: 'Secure your seasonal tent camping site in Ontario for 2026. Perfect for families who want guaranteed weekend camping near Toronto all summer long.',
+              title: 'Seasonal Tent Sites',
+              desc: 'Secure your favorite secluded tent site for the entire 2026 season. Perfect for weekend warriors who want a guaranteed spot all summer.',
               features: ['May – October', 'Fire pit included', 'Beach access', 'Storage available'],
             },
             {
@@ -105,8 +104,8 @@ const HomePage = () => (
                   <path d="M10 13H14" stroke="var(--brand)" strokeWidth="1.5" strokeLinecap="round"/>
                 </svg>
               ),
-              title: 'Seasonal RV Sites Ontario',
-              desc: 'Seasonal RV sites near Toronto with full hookups — water, sewer, and 30/50 amp electrical service. Park your RV for the season and enjoy hassle-free family camping in Ontario.',
+              title: 'Seasonal RV Sites',
+              desc: 'Park your RV and leave it all season. Full hookups with water, sewer, and 30/50 amp electrical service. Enjoy the freedom of your own seasonal site.',
               features: ['May – October', 'Full hookups', 'Picnic table & fire pit', 'Convenient location', '30/50 amp service'],
             },
           ].map((option, i) => (

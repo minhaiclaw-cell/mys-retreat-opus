@@ -54,13 +54,13 @@ const Accommodations = ({ preview = false }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <p className="section-label">Accommodations</p>
+          <p className="section-label">Stay</p>
           <h2 className="section-heading">
-            Camping & Seasonal Sites <span className="accent">in Ontario</span>
+            Choose Your <span className="accent">Experience</span>
           </h2>
           <p className="section-body">
-            Choose from lakefront cottages, seasonal RV sites, or tent camping near Toronto. 
-            Family-friendly accommodations for weekend getaways and full-season stays.
+            From cozy cottages to spacious RV sites — we have the perfect spot
+            for your camping getaway near Algonquin Park.
           </p>
         </motion.div>
 

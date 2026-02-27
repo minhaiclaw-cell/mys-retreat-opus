@@ -13,19 +13,18 @@ const Intro = () => (
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <p className="section-label">Welcome to MYS Retreat</p>
+          <p className="section-label">Welcome</p>
           <h2 className="section-heading">
-            Ontario's Premier <span className="accent">Family Campground</span>
+            Your <span className="accent">Home Away</span> from Home
           </h2>
           <p className="section-body">
-            Experience family-friendly camping in Kearney, Ontario — just 2.5 hours north of Toronto 
-            and minutes from Algonquin Provincial Park. Our 175+ acre campground features seasonal 
-            RV sites, secluded tent camping, and waterfront cottages on beautiful Himbury Lake.
+            Come and relax in this beautiful, fun, and friendly environment. Get in touch 
+            with the natural beauty of Kearney — pine forests, crystal-clear lakes, and 
+            stunning landscapes all around you, minutes from Algonquin Provincial Park.
           </p>
           <p className="section-body" style={{ marginTop: '1rem' }}>
-            Perfect for families seeking an affordable camping getaway in Ontario. Unlike crowded 
-            national parks that book up months in advance, we offer flexible seasonal sites and 
-            nightly camping options with guaranteed availability for your weekend escape or summer vacation.
+            We're looking forward to hosting you and making your stay a memorable one. 
+            Whether you're a family, a group of friends, or a solo adventurer — this is your place.
           </p>
           <div className="intro__stats">
             <div className="intro__stat">

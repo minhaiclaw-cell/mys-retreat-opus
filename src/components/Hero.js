@@ -40,11 +40,11 @@ const Hero = () => {
           MYS Retreat
         </motion.div>
         <motion.h1 className="hero__title" variants={fadeUp}>
-          Family Camping in Ontario<br />
-          <span className="hero__accent">2.5 Hours from Toronto</span>
+          A Family Campground<br />
+          <span className="hero__accent">in the Heart of Nature</span>
         </motion.h1>
         <motion.p className="hero__subtitle" variants={fadeUp}>
-          Seasonal RV sites, tent camping & lakefront cottages near Algonquin Park on Himbury Lake.
+          Where the wilderness meets the water — unforgettable moments on Himbury Lake, minutes from Algonquin Park.
         </motion.p>
         <motion.div className="hero__actions" variants={fadeUp}>
           <Link

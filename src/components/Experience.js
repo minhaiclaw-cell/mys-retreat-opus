@@ -19,13 +19,13 @@ const Experience = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <p className="section-label">Family Activities</p>
+        <p className="section-label">Activities</p>
         <h2 className="section-heading">
-          Outdoor Adventures <span className="accent">for All Ages</span>
+          Camping <span className="accent">Adventures</span>
         </h2>
         <p className="section-body">
-          Family-friendly camping activities near Algonquin Park. Swimming, hiking, fishing, 
-          and kayaking — perfect for creating lasting memories in Ontario's great outdoors.
+          Adventure awaits at every turn. Explore our wide range of outdoor
+          activities for all ages near Algonquin Park.
         </p>
       </motion.div>
 
