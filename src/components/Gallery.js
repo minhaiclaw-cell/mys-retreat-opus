@@ -11,11 +11,10 @@ const images = [
   { src: 'campfire.jpg', caption: 'Evening campfire' },
   { src: 'campsite.jpg', caption: 'Evergreen Grove campsite' },
   { src: 'hiking.jpg', caption: 'Forest trails' },
-  { src: 'lake-kayak.jpg', caption: 'Kayaking adventures' },
-  { src: 'aerial-forest.jpg', caption: 'Aerial view of MYS Retreat' },
-  { src: 'cabin.jpg', caption: 'RV rentals' },
-  { src: 'hero-2.jpg', caption: 'RV sites' },
-  { src: 'mitziville-cabin.jpg', caption: 'Cabins by Mitziville' },
+  { src: 'Header.png', caption: 'MYS Retreat on Himbury Lake' },
+  { src: 'image.png', caption: 'Aerial View of MYS Retreat' },
+  { src: 'amenities.png', caption: 'Cottages at MYS Retreat' },
+  { src: 'campsite.png', caption: 'Camping Sites at Beaver\'s Bend' },
 ];
 
 const Gallery = () => {

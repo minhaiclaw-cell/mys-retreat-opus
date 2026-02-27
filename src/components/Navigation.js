@@ -7,9 +7,9 @@ import './Navigation.css';
 const navItems = [
   { path: '/', label: 'Home' },
   { path: '/accommodations', label: 'Stay' },
+  { path: '/about', label: 'About' },
   { path: '/activities', label: 'Activities' },
   { path: '/gallery', label: 'Gallery' },
-  { path: '/about', label: 'About' },
   { path: '/faq', label: 'FAQ' },
   { path: '/contact', label: 'Contact' },
 ];
