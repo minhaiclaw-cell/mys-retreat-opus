@@ -11,7 +11,7 @@ const AboutPage = () => (
     transition={{ duration: 0.3 }}
   >
     <PageHero
-      image="aerial-forest.jpg"
+      image="aerial-forest-new.jpg"
       label="About Us"
       title="Welcome to MYS Retreat"
       subtitle="A family legacy of hospitality, natural beauty, and unforgettable camping experiences."
