@@ -49,7 +49,7 @@ const Footer = () => (
       <div className="footer__grid">
         <div className="footer__brand">
           <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="MYS Retreat" className="footer__logo" />
-          <p className="footer__tagline">Your home away from home on Himbury Lake.<br />Kearney, Ontario.</p>
+          <p className="footer__tagline">Gateway to Algonquin — Family Camping in Nature's Embrace<br />Kearney, Ontario</p>
         </div>
 
         <div className="footer__col">

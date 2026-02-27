@@ -35,8 +35,8 @@ const AccommodationsPage = () => (
             Seasonal <span className="accent">Site Rentals</span>
           </h2>
           <p className="section-body" style={{ margin: '0 auto' }}>
-            Make MYS Retreat your home away from home all season long. We offer seasonal site rentals 
-            for both tent camping and RV sites from May through October, near Algonquin Park.
+            Your gateway to Algonquin and nature's embrace all season long. We offer seasonal site rentals 
+            for both tent camping and RV sites from May through October in Kearney, Ontario.
           </p>
         </motion.div>
 
