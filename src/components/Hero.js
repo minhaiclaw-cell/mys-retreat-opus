@@ -41,14 +41,13 @@ const Hero = () => {
           />
           <h2 style={{
             fontFamily: "'Georgia', serif",
-            fontSize: '2.5rem',
+            fontSize: '1.8rem',
             fontWeight: 700,
-            letterSpacing: '0.03em',
+            letterSpacing: '0.05em',
             color: 'white',
             margin: 0,
             textShadow: '0 2px 12px rgba(0,0,0,0.4)',
-            width: '120px',
-            textAlign: 'center',
+            whiteSpace: 'nowrap',
           }}>
             MYS RETREAT
           </h2>
