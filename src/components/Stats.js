@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './Stats.css';
 
@@ -14,12 +15,18 @@ const Stats = () => (
         <div className="stats__text">
           <p className="section-label">The Property</p>
           <h2 className="section-heading">
-            Your Ontario <span className="accent">Wilderness Escape</span>
+            <span className="accent">172 Acres</span> of Natural Beauty
           </h2>
           <p className="section-body">
-            172 acres of pristine Canadian wilderness with private lakefront
-            beach and direct access to Himbury Lake. Gateway to Algonquin Park.
+            Nestled on 172 acres of pristine Canadian wilderness along the shores of Himbury Lake 
+            in Kearney, Ontario. Our property features diverse terrain including towering pine forests, 
+            tranquil rivers, dramatic cliff faces, and extensive hiking trails. Enjoy direct lakefront 
+            access with a private beach, boat launch, and fishing dock — all just minutes from 
+            Algonquin Provincial Park.
           </p>
+          <Link to="/about" className="btn btn--outline" style={{ marginTop: '1.5rem', display: 'inline-block' }}>
+            Learn More About Us →
+          </Link>
         </div>
 
         <div className="stats__map">

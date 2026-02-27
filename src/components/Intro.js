@@ -15,16 +15,16 @@ const Intro = () => (
         >
           <p className="section-label">Welcome</p>
           <h2 className="section-heading">
-            Your <span className="accent">Home Away</span> from Home
+            Gateway to <span className="accent">Algonquin</span> Park
           </h2>
           <p className="section-body">
-            Come and relax in this beautiful, fun, and friendly environment. Get in touch 
-            with the natural beauty of Kearney — pine forests, crystal-clear lakes, and 
-            stunning landscapes all around you, minutes from Algonquin Provincial Park.
+            Come and relax in this beautiful, fun, and family-friendly environment. Immerse yourself 
+            in the natural beauty of Kearney — towering pine forests, crystal-clear Himbury Lake, and 
+            stunning landscapes all around you, just minutes from Algonquin Provincial Park.
           </p>
           <p className="section-body" style={{ marginTop: '1rem' }}>
             We're looking forward to hosting you and making your stay a memorable one. 
-            Whether you're a family, a group of friends, or a solo adventurer — this is your place.
+            Whether you're a family, a group of friends, or a solo adventurer — find nature's embrace here.
           </p>
           <div className="intro__stats">
             <div className="intro__stat">
