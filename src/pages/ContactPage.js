@@ -66,7 +66,7 @@ const ContactPage = () => (
     transition={{ duration: 0.3 }}
   >
     <PageHero
-      image="fall-bg.jpg"
+      image="contact-hero.jpg"
       label="Contact"
       title="Get In Touch"
       subtitle="Questions? We'd love to hear from you. Reach out anytime."
@@ -137,22 +137,70 @@ const ContactPage = () => (
           />
         </motion.div>
 
-        {/* FAQ */}
+        {/* Newsletter Signup */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          style={{ maxWidth: 700, margin: '0 auto' }}
+          style={{
+            background: 'linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%)',
+            borderRadius: 'var(--radius)',
+            padding: 'var(--space-lg)',
+            textAlign: 'center',
+            color: 'var(--white)',
+            boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
+            maxWidth: 700,
+            margin: '0 auto',
+          }}
         >
-          <div style={{ textAlign: 'center', marginBottom: 'var(--space-lg)' }}>
-            <p className="section-label">FAQ</p>
-            <h2 className="section-heading">
-              Common <span className="accent">Questions</span>
-            </h2>
+          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.8rem', marginBottom: '0.75rem', color: 'var(--white)' }}>
+            Stay Updated
+          </h2>
+          <p style={{ fontSize: '1rem', marginBottom: '1.5rem', opacity: 0.95, lineHeight: 1.6 }}>
+            Sign up for our newsletter to receive updates on events, special offers, and news from MYS Retreat.
+          </p>
+          <div style={{
+            display: 'flex',
+            gap: '0.75rem',
+            maxWidth: 500,
+            margin: '0 auto',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+          }}>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              style={{
+                flex: '1 1 250px',
+                padding: '0.875rem 1.25rem',
+                borderRadius: 'var(--radius)',
+                border: 'none',
+                fontSize: '0.95rem',
+                outline: 'none',
+              }}
+            />
+            <button
+              style={{
+                padding: '0.875rem 2rem',
+                background: 'var(--white)',
+                color: 'var(--brand)',
+                border: 'none',
+                borderRadius: 'var(--radius)',
+                fontWeight: 600,
+                fontSize: '0.95rem',
+                cursor: 'pointer',
+                transition: 'transform 0.2s',
+                whiteSpace: 'nowrap',
+              }}
+              onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
+              onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+            >
+              Subscribe
+            </button>
           </div>
-          {faqs.map((faq) => (
-            <FAQ key={faq.q} faq={faq} />
-          ))}
+          <p style={{ fontSize: '0.8rem', marginTop: '1rem', opacity: 0.8 }}>
+            We respect your privacy. Unsubscribe anytime.
+          </p>
         </motion.div>
       </div>
     </section>

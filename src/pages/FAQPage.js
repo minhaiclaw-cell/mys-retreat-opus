@@ -35,7 +35,7 @@ const faqs = [
       },
       {
         q: 'Is there a minimum stay requirement?',
-        a: 'Summer weekends (June-August) and holidays have a 2-night minimum. Off-season and weekdays have no minimum. Cottages may have longer minimums during peak season.',
+        a: 'Sometimes there is a 2-night minimum requirement, which will be reflected on our booking portal. Requirements vary by season and accommodation type.',
       },
     ],
   },
@@ -107,7 +107,7 @@ const faqs = [
       },
       {
         q: 'Is there cell phone reception?',
-        a: 'Cell service can be spotty depending on your provider. We recommend letting family know you may be off-grid during your stay.',
+        a: 'The site has cell service, but it may be spotty depending on your provider. We recommend letting family know you may have limited connectivity during your stay.',
       },
       {
         q: 'Are there stores or restaurants nearby?',
@@ -161,7 +161,7 @@ const FAQPage = () => {
       transition={{ duration: 0.3 }}
     >
       <PageHero
-        image="lake-kayak.jpg"
+        image="faq-hero.jpg"
         label="Help Center"
         title="Frequently Asked Questions"
         subtitle="Everything you need to know about camping at MYS Retreat."
@@ -193,7 +193,43 @@ const FAQPage = () => {
             </div>
           ))}
 
-          <div className="faq-cta">
+          {/* Quick Common Questions */}
+          <div style={{ marginTop: 'var(--space-xl)', paddingTop: 'var(--space-lg)', borderTop: '1px solid #e5e7eb' }}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              style={{ maxWidth: 700, margin: '0 auto' }}
+            >
+              <div style={{ textAlign: 'center', marginBottom: 'var(--space-lg)' }}>
+                <p className="section-label">Quick Answers</p>
+                <h2 className="section-heading">
+                  Common <span className="accent">Questions</span>
+                </h2>
+              </div>
+              {[
+                { q: 'What are the check-in and check-out times?', a: 'Check-in is at 2:00 PM and check-out is at 11:00 AM. Early check-in may be available upon request.' },
+                { q: 'Are pets allowed?', a: 'Yes! We are a pet-friendly campground. Pets must be kept on a leash and cleaned up after at all times.' },
+                { q: 'Is there WiFi available?', a: 'WiFi is available in our cottages and around the office area. The campground and RV sites have limited cellular coverage — embrace the disconnect!' },
+                { q: 'What amenities are on-site?', a: 'We have a white sand beach, boat launch, fish cleaning station, playground, laundry facilities, hiking trails, and a general store.' },
+                { q: 'Can I have a campfire?', a: 'Campfires are allowed at designated fire pits when there is no fire ban in effect. Firewood is available for purchase at the office.' },
+                { q: 'How do I get there?', a: 'We are located at 2900 Highway 518, Kearney, Ontario. About 2.5 hours north of Toronto via Highway 11.' },
+              ].map((faq, i) => (
+                <FAQItem
+                  key={i}
+                  question={faq.q}
+                  answer={faq.a}
+                  isOpen={openItem === `quick-${i}`}
+                  onToggle={() => {
+                    const key = `quick-${i}`;
+                    setOpenItem(openItem === key ? null : key);
+                  }}
+                />
+              ))}
+            </motion.div>
+          </div>
+
+          <div className="faq-cta" style={{ marginTop: 'var(--space-xl)' }}>
             <h3 className="faq-cta__title">Still have questions?</h3>
             <p className="faq-cta__text">
               We're here to help! Contact us by phone, email, or stop by the office during your visit.
