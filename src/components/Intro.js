@@ -28,7 +28,7 @@ const Intro = () => (
           </p>
           <div className="intro__stats">
             <div className="intro__stat">
-              <span className="intro__stat-number">175+</span>
+              <span className="intro__stat-number">172</span>
               <span className="intro__stat-label">Acres</span>
             </div>
             <div className="intro__stat">

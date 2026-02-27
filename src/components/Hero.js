@@ -36,8 +36,8 @@ const Hero = () => {
         <motion.p className="hero__label" variants={fadeUp}>
           Kearney, Ontario
         </motion.p>
-        <motion.div className="hero__retreat-name" variants={fadeUp}>
-          MYS Retreat
+        <motion.div className="hero__logo" variants={fadeUp}>
+          <img src={`${process.env.PUBLIC_URL}/logo-original.png`} alt="MYS Retreat Logo" style={{ maxWidth: '180px', height: 'auto' }} />
         </motion.div>
         <motion.h1 className="hero__title" variants={fadeUp}>
           A Family Campground<br />

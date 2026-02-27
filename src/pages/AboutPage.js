@@ -23,7 +23,7 @@ const AboutPage = () => (
           <div className="about-text">
             <h2 className="section-heading">Who We Are</h2>
             <p className="section-body">
-              MYS Retreat is a family-owned campground nestled on 175+ acres of pristine Ontario wilderness
+              MYS Retreat is a family-owned campground nestled on 172 acres of pristine Canadian wilderness
               along the shores of Himbury Lake in Kearney, Ontario. For years, we've been welcoming families,
               adventurers, and nature lovers from all walks of life to experience the magic of Northern Ontario camping.
             </p>
@@ -33,6 +33,14 @@ const AboutPage = () => (
               and unforgettable.
             </p>
 
+            <h3 className="section-subheading">Your Ontario Wilderness Escape</h3>
+            <p className="section-body">
+              Located minutes from Algonquin Provincial Park, our 172 acres offer pristine natural beauty 
+              with unique terrain to explore — winding trails through towering pine forests, tranquil rivers, 
+              dramatic cliff faces, and direct access to quiet Himbury Lake. Every corner of the property 
+              invites adventure and discovery.
+            </p>
+
             <h3 className="section-subheading">What We Offer</h3>
             <ul className="about-list">
               <li>3 fully furnished lakefront cottages with modern amenities</li>
@@ -40,10 +48,11 @@ const AboutPage = () => (
               <li>65 RV sites with full hookups (30/50 amp service)</li>
               <li>RV rentals for those without their own</li>
               <li>Modern cabin pods by our partners at Mitziville</li>
-              <li>Exclusive white sand beach with pristine lake access</li>
+              <li>Exclusive white sand beach with pristine Himbury Lake access</li>
               <li>Boat launch, fishing dock, and kayak/canoe rentals</li>
-              <li>Hiking trails through pine forests and lakefront bluffs</li>
+              <li>Extensive hiking trails through pine forests, cliff faces, and along rivers</li>
               <li>Nightly campfire gatherings and community events</li>
+              <li>Unique terrain with diverse landscapes to explore across all 172 acres</li>
             </ul>
 
             <h3 className="section-subheading">Season & Hours</h3>

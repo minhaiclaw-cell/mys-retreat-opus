@@ -29,8 +29,8 @@ const stays = [
     title: 'RV Rentals',
     price: '$95',
     image: 'cabin.jpg',
-    description: "Don't have an RV? No problem! Rent one of our fully-equipped RVs for the perfect experience.",
-    features: ['Fully Equipped', 'Linens Included', 'Kitchenette', 'Pet Friendly'],
+    description: "Don't have an RV? No problem! Rent one of our RVs — various sizes available, fits up to 7 people.",
+    features: ['Full Hookup', 'Shower', 'Kitchenette', 'Bed', 'Pet Friendly', 'Fits up to 7'],
   },
   {
     title: 'Cabins by Mitziville',
