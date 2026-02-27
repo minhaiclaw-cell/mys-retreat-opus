@@ -49,7 +49,7 @@ const AboutPage = () => (
               <li>RV rentals for those without their own</li>
               <li>Modern cabin pods by our partners at Mitziville</li>
               <li>Private lakefront beach with pristine Himbury Lake access</li>
-              <li>Boat launch, fishing dock, and kayak/canoe rentals</li>
+              <li>Fishing dock and kayak/canoe rentals</li>
               <li>Extensive hiking trails through pine forests, cliff faces, and along rivers</li>
               <li>Nightly campfire gatherings and community events</li>
               <li>Unique terrain with diverse landscapes to explore across all 172 acres</li>

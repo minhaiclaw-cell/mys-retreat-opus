@@ -21,7 +21,7 @@ const Stats = () => (
             Nestled on 172 acres of pristine Canadian wilderness along the shores of Himbury Lake 
             in Kearney, Ontario. Our property features diverse terrain including towering pine forests, 
             tranquil rivers, dramatic cliff faces, and extensive hiking trails. Enjoy direct lakefront 
-            access with a private beach, boat launch, and fishing dock — all just minutes from 
+            access with a private beach and fishing dock — all just minutes from 
             Algonquin Provincial Park.
           </p>
           <Link to="/about" className="btn btn--outline" style={{ marginTop: '1.5rem', display: 'inline-block' }}>

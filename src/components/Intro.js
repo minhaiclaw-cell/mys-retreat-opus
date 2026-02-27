@@ -15,7 +15,7 @@ const Intro = () => (
         >
           <p className="section-label">Welcome</p>
           <h2 className="section-heading">
-            Gateway to <span className="accent">Algonquin</span> Park
+            Lakefront Camping & <span className="accent">Cottage Rentals</span>
           </h2>
           <p className="section-body">
             Come and relax in this beautiful, fun, and family-friendly environment. Immerse yourself 
