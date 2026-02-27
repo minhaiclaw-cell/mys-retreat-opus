@@ -22,7 +22,7 @@ const Hero = () => {
   return (
     <section id="home" className="hero">
       <motion.div className="hero__bg" style={{ y: bgY }}>
-        <img src={`${process.env.PUBLIC_URL}/hero-new.jpg`} alt="" />
+        <img src={`${process.env.PUBLIC_URL}/hero-new.jpg`} alt="MYS Retreat campground Kearney Ontario - family camping near Algonquin Park" />
       </motion.div>
       <div className="hero__overlay" />
 
@@ -40,11 +40,11 @@ const Hero = () => {
           MYS Retreat
         </motion.div>
         <motion.h1 className="hero__title" variants={fadeUp}>
-          A Family Campground<br />
-          <span className="hero__accent">in the Heart of Nature</span>
+          Family Camping in Ontario<br />
+          <span className="hero__accent">2.5 Hours from Toronto</span>
         </motion.h1>
         <motion.p className="hero__subtitle" variants={fadeUp}>
-          Where the wilderness meets the water — unforgettable moments on Himbury Lake.
+          Seasonal RV sites, tent camping & lakefront cottages near Algonquin Park on Himbury Lake.
         </motion.p>
         <motion.div className="hero__actions" variants={fadeUp}>
           <Link

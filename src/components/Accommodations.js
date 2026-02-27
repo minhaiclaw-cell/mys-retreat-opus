@@ -54,13 +54,13 @@ const Accommodations = ({ preview = false }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <p className="section-label">Stay</p>
+          <p className="section-label">Accommodations</p>
           <h2 className="section-heading">
-            Choose Your <span className="accent">Experience</span>
+            Camping & Seasonal Sites <span className="accent">in Ontario</span>
           </h2>
           <p className="section-body">
-            From cozy cottages to spacious RV sites — we have the perfect spot
-            for your Ontario camping getaway.
+            Choose from lakefront cottages, seasonal RV sites, or tent camping near Toronto. 
+            Family-friendly accommodations for weekend getaways and full-season stays.
           </p>
         </motion.div>
 

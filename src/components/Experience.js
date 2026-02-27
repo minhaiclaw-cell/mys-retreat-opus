@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 import './Experience.css';
 
 const activities = [
-  { image: 'campfire.jpg', title: 'Campfires', desc: 'Ignite your evenings with nightly campfire gatherings. Share stories, roast marshmallows, and make lasting memories.' },
-  { image: 'hiking.jpg', title: 'Hiking', desc: 'Embrace the wilderness with year-round trekking through pine forests and along lakefront bluffs.' },
-  { image: 'kayaking-canoeing.jpg', title: 'Kayaking & Canoeing', desc: 'Paddle into paradise. Explore hidden coves and enjoy the tranquility of nature from the water.' },
-  { image: 'beach-photo.jpg', title: 'White Sand Beach', desc: 'Relax on our exclusive white sand beach with pristine lakefront access. Perfect for families and swimming.' },
-  { image: 'fishing-photo.jpg', title: 'Fishing', desc: 'Cast away your worries — excellent bass, pike, and trout fishing right from our dock on Himbury Lake.' },
+  { image: 'campfire.jpg', title: 'Campfires', desc: 'Ignite your evenings with nightly campfire gatherings. Share stories, roast marshmallows, and make lasting memories.', alt: 'Family campfire gathering at MYS Retreat campground Ontario' },
+  { image: 'hiking.jpg', title: 'Hiking', desc: 'Embrace the wilderness with year-round trekking through pine forests and along lakefront bluffs.', alt: 'Hiking trails near Algonquin Park at MYS Retreat Kearney Ontario' },
+  { image: 'kayaking-canoeing.jpg', title: 'Kayaking & Canoeing', desc: 'Paddle into paradise. Explore hidden coves and enjoy the tranquility of nature from the water.', alt: 'Kayaking and canoeing on Himbury Lake Ontario family camping' },
+  { image: 'beach-photo.jpg', title: 'White Sand Beach', desc: 'Relax on our exclusive white sand beach with pristine lakefront access. Perfect for families and swimming.', alt: 'White sand beach at family campground Ontario near Toronto' },
+  { image: 'fishing-photo.jpg', title: 'Fishing', desc: 'Cast away your worries — excellent bass, pike, and trout fishing right from our dock on Himbury Lake.', alt: 'Fishing on Himbury Lake at MYS Retreat camping Ontario' },
 ];
 
 const Experience = () => (
@@ -19,13 +19,13 @@ const Experience = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <p className="section-label">Activities</p>
+        <p className="section-label">Family Activities</p>
         <h2 className="section-heading">
-          Camping <span className="accent">Adventures</span>
+          Outdoor Adventures <span className="accent">for All Ages</span>
         </h2>
         <p className="section-body">
-          Adventure awaits at every turn. Explore our wide range of outdoor
-          activities for all ages.
+          Family-friendly camping activities near Algonquin Park. Swimming, hiking, fishing, 
+          and kayaking — perfect for creating lasting memories in Ontario's great outdoors.
         </p>
       </motion.div>
 
@@ -40,7 +40,7 @@ const Experience = () => (
             transition={{ delay: i * 0.08, duration: 0.5 }}
           >
             <div className="act-card__image">
-              <img src={`${process.env.PUBLIC_URL}/${act.image}`} alt={act.title} loading="lazy" />
+              <img src={`${process.env.PUBLIC_URL}/${act.image}`} alt={act.alt || act.title} loading="lazy" />
             </div>
             <div className="act-card__content">
               <h3 className="act-card__title">{act.title}</h3>
