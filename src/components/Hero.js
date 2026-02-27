@@ -37,16 +37,18 @@ const Hero = () => {
           <img 
             src={`${process.env.PUBLIC_URL}/logo-icon.png`} 
             alt="MYS Retreat Icon" 
-            style={{ width: '90px', height: 'auto', marginBottom: '0.5rem', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.3))' }} 
+            style={{ width: '120px', height: 'auto', marginBottom: '0.5rem', filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.3))' }} 
           />
           <h2 style={{
             fontFamily: "'Georgia', serif",
             fontSize: '2.5rem',
             fontWeight: 700,
-            letterSpacing: '0.15em',
+            letterSpacing: '0.03em',
             color: 'white',
             margin: 0,
             textShadow: '0 2px 12px rgba(0,0,0,0.4)',
+            width: '120px',
+            textAlign: 'center',
           }}>
             MYS RETREAT
           </h2>
