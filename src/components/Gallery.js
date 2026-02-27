@@ -4,15 +4,15 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import './Gallery.css';
 
 const images = [
-  { src: 'aerial.jpg', caption: 'Kayaking on Himbury Lake' },
+  { src: 'image.png', caption: 'Aerial View of MYS Retreat' },
+  { src: 'campsite.jpg', caption: 'Evergreen Grove campsite' },
+  { src: 'hiking.jpg', caption: 'Forest trails' },
+  { src: 'Header.png', caption: 'Kayaking on Himbury Lake' },
+  { src: 'aerial.jpg', caption: 'Autumn/Fall in Kearney' },
   { src: 'water-view.jpg', caption: 'Pristine lake waters' },
   { src: 'cottages.jpg', caption: 'Lakefront cottages' },
   { src: 'himbury-cottage.jpg', caption: 'Cozy cottage retreat' },
   { src: 'campfire.jpg', caption: 'Evening campfire' },
-  { src: 'campsite.jpg', caption: 'Evergreen Grove campsite' },
-  { src: 'hiking.jpg', caption: 'Forest trails' },
-  { src: 'Header.png', caption: 'MYS Retreat on Himbury Lake' },
-  { src: 'image.png', caption: 'Aerial View of MYS Retreat' },
   { src: 'amenities.png', caption: 'Cottages at MYS Retreat' },
   { src: 'campsite.png', caption: 'Camping Sites at Beaver\'s Bend' },
 ];
