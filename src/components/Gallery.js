@@ -8,7 +8,7 @@ const images = [
   { src: 'campsite.jpg', caption: 'Evergreen Grove campsite' },
   { src: 'hiking.jpg', caption: 'Forest trails' },
   { src: 'Header.png', caption: 'Kayaking on Himbury Lake' },
-  { src: 'aerial.jpg', caption: 'Autumn/Fall in Kearney' },
+  { src: 'aerial.jpg', caption: 'Autumn colours in Kearney' },
   { src: 'water-view.jpg', caption: 'Pristine lake waters' },
   { src: 'cottages.jpg', caption: 'Lakefront cottages' },
   { src: 'himbury-cottage.jpg', caption: 'Cozy cottage retreat' },
