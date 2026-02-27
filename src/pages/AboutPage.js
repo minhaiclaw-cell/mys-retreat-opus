@@ -82,7 +82,7 @@ const AboutPage = () => (
                 className="map-card__image"
               />
               <p className="map-card__caption">
-                Our 175+ acre property features distinct camping zones, lakefront access, hiking trails, 
+                Our 172 acre property features distinct camping zones, lakefront access, hiking trails, 
                 and recreational facilities. Stop by the office for a detailed map and site recommendations.
               </p>
             </div>
@@ -92,7 +92,7 @@ const AboutPage = () => (
               <ul className="info-card__list">
                 <li><strong>Established:</strong> Family-owned since inception</li>
                 <li><strong>Location:</strong> Kearney, Ontario</li>
-                <li><strong>Size:</strong> 175+ acres</li>
+                <li><strong>Size:</strong> 172 acres</li>
                 <li><strong>Waterfront:</strong> Himbury Lake</li>
                 <li><strong>Pet Policy:</strong> Pet-friendly sites available</li>
                 <li><strong>WiFi:</strong> Available in cottages & office area</li>

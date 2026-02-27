@@ -14,7 +14,7 @@ const GalleryPage = () => (
       image="aerial.jpg"
       label="Gallery"
       title="See The Beauty"
-      subtitle="175+ acres of pristine nature on Himbury Lake — take a look around."
+      subtitle="172 acres of pristine nature on Himbury Lake — take a look around."
     />
     <Gallery />
   </motion.main>

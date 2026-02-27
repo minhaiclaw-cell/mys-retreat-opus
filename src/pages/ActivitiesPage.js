@@ -159,7 +159,7 @@ const ActivitiesPage = () => (
             Campground <span className="accent">Map</span>
           </h2>
           <p className="section-body" style={{ maxWidth: '600px', margin: '1rem auto 0' }}>
-            Explore our 175+ acre property featuring distinct camping zones, lakefront access, 
+            Explore our 172 acre property featuring distinct camping zones, lakefront access, 
             hiking trails, and recreational facilities.
           </p>
         </motion.div>

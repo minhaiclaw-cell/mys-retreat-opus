@@ -17,7 +17,7 @@ const Stats = () => (
             Your Ontario <span className="accent">Wilderness Escape</span>
           </h2>
           <p className="section-body">
-            175+ acres of pristine Canadian wilderness with exclusive white sand
+            172 acres of pristine Canadian wilderness with exclusive white sand
             beach and lakefront access to Himbury Lake. Gateway to Algonquin Park.
           </p>
         </div>
