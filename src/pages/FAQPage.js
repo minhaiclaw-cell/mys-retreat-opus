@@ -86,7 +86,7 @@ const faqs = [
     questions: [
       {
         q: 'What activities are available?',
-        a: 'Swimming at our white sand beach, kayaking, canoeing, fishing, hiking trails, campfire gatherings, stargazing, and wildlife watching. We are also close to Algonquin Park for day trips.',
+        a: 'Swimming at our private lakefront beach, kayaking, canoeing, fishing, hiking trails, campfire gatherings, stargazing, and wildlife watching. We are also close to Algonquin Park for day trips.',
       },
       {
         q: 'Do I need a fishing license?',
@@ -211,7 +211,7 @@ const FAQPage = () => {
                 { q: 'What are the check-in and check-out times?', a: 'Check-in is at 2:00 PM and check-out is at 11:00 AM. Early check-in may be available upon request.' },
                 { q: 'Are pets allowed?', a: 'Yes! We are a pet-friendly campground. Pets must be kept on a leash and cleaned up after at all times.' },
                 { q: 'Is there WiFi available?', a: 'WiFi is available in our cottages and around the office area. The campground and RV sites have limited cellular coverage — embrace the disconnect!' },
-                { q: 'What amenities are on-site?', a: 'We have a white sand beach, boat launch, fish cleaning station, playground, laundry facilities, hiking trails, and a general store.' },
+                { q: 'What amenities are on-site?', a: 'We have a private lakefront beach, boat launch, fish cleaning station, playground, laundry facilities, hiking trails, and a general store.' },
                 { q: 'Can I have a campfire?', a: 'Campfires are allowed at designated fire pits when there is no fire ban in effect. Firewood is available for purchase at the office.' },
                 { q: 'How do I get there?', a: 'We are located at 2900 Highway 518, Kearney, Ontario. About 2.5 hours north of Toronto via Highway 11.' },
               ].map((faq, i) => (

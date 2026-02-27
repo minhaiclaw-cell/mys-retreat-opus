@@ -6,7 +6,7 @@ const activities = [
   { image: 'campfire.jpg', title: 'Campfires', desc: 'Ignite your evenings with nightly campfire gatherings. Share stories, roast marshmallows, and make lasting memories.', alt: 'Family campfire gathering at MYS Retreat campground Ontario' },
   { image: 'hiking.jpg', title: 'Hiking', desc: 'Embrace the wilderness with year-round trekking through pine forests and along lakefront bluffs.', alt: 'Hiking trails near Algonquin Park at MYS Retreat Kearney Ontario' },
   { image: 'kayaking-canoeing.jpg', title: 'Kayaking & Canoeing', desc: 'Paddle into paradise. Explore hidden coves and enjoy the tranquility of nature from the water.', alt: 'Kayaking and canoeing on Himbury Lake Ontario family camping' },
-  { image: 'beach-photo.jpg', title: 'White Sand Beach', desc: 'Relax on our exclusive white sand beach with pristine lakefront access. Perfect for families and swimming.', alt: 'White sand beach at family campground Ontario near Toronto' },
+  { image: 'beach-photo.jpg', title: 'Private Lakefront Beach', desc: 'Relax on our exclusive private lakefront beach with pristine water access. Perfect for families and swimming.', alt: 'Private lakefront beach at family campground Ontario near Toronto' },
   { image: 'fishing-photo.jpg', title: 'Fishing', desc: 'Cast away your worries — excellent bass, pike, and trout fishing right from our dock on Himbury Lake.', alt: 'Fishing on Himbury Lake at MYS Retreat camping Ontario' },
 ];
 

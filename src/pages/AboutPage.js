@@ -48,7 +48,7 @@ const AboutPage = () => (
               <li>65 RV sites with full hookups (30/50 amp service)</li>
               <li>RV rentals for those without their own</li>
               <li>Modern cabin pods by our partners at Mitziville</li>
-              <li>Exclusive white sand beach with pristine Himbury Lake access</li>
+              <li>Private lakefront beach with pristine Himbury Lake access</li>
               <li>Boat launch, fishing dock, and kayak/canoe rentals</li>
               <li>Extensive hiking trails through pine forests, cliff faces, and along rivers</li>
               <li>Nightly campfire gatherings and community events</li>
