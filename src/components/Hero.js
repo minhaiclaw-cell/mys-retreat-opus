@@ -37,7 +37,10 @@ const Hero = () => {
           Kearney, Ontario
         </motion.p>
         <motion.div className="hero__logo" variants={fadeUp}>
-          <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="MYS Retreat Logo" style={{ maxWidth: '180px', height: 'auto' }} />
+          <svg width="180" height="180" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.3))' }}>
+            <text x="100" y="80" fontFamily="'Georgia', serif" fontSize="72" fontWeight="700" fill="white" textAnchor="middle" letterSpacing="4">MYS</text>
+            <text x="100" y="130" fontFamily="'Georgia', serif" fontSize="32" fontWeight="400" fill="white" textAnchor="middle" letterSpacing="2">RETREAT</text>
+          </svg>
         </motion.div>
         <motion.h1 className="hero__title" variants={fadeUp}>
           A Family Campground<br />

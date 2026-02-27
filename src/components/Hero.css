@@ -16,6 +16,10 @@
   position: relative; z-index: 2; text-align: center;
   color: var(--white); padding: 0 var(--space-md);
 }
+.hero__logo {
+  display: flex; justify-content: center; align-items: center;
+  margin: 0 auto var(--space-md);
+}
 .hero__label {
   font-size: 0.8rem; font-weight: 700; letter-spacing: 0.3em;
   text-transform: uppercase; margin-bottom: var(--space-sm); opacity: 0.9;
