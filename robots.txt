@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://minhaiclaw-cell.github.io/mys-retreat-opus/sitemap.xml

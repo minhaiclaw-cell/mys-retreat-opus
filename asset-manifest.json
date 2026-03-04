@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/mys-retreat-opus/static/css/main.8a81fd56.css",
+    "main.js": "/mys-retreat-opus/static/js/main.22a09985.js",
+    "static/media/adventure-bg.jpg": "/mys-retreat-opus/static/media/adventure-bg.5d169eefc956711b5a12.jpg",
+    "index.html": "/mys-retreat-opus/index.html",
+    "main.8a81fd56.css.map": "/mys-retreat-opus/static/css/main.8a81fd56.css.map",
+    "main.22a09985.js.map": "/mys-retreat-opus/static/js/main.22a09985.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8a81fd56.css",
+    "static/js/main.22a09985.js"
+  ]
+}
