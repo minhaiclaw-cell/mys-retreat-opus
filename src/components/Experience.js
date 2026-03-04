@@ -8,6 +8,7 @@ const activities = [
   { image: 'kayaking-canoeing.jpg', title: 'Kayaking & Canoeing', desc: 'Paddle into paradise. Explore hidden coves and enjoy the tranquility of nature from the water.', alt: 'Kayaking and canoeing on Himbury Lake Ontario family camping' },
   { image: 'beach-photo.jpg', title: 'Private Lakefront Beach', desc: 'Relax on our exclusive private lakefront beach with pristine water access. Perfect for families and swimming.', alt: 'Private lakefront beach at family campground Ontario near Toronto' },
   { image: 'fishing-photo.jpg', title: 'Fishing', desc: 'Cast away your worries — excellent bass, pike, and trout fishing right from our dock on Himbury Lake.', alt: 'Fishing on Himbury Lake at MYS Retreat camping Ontario' },
+  { image: 'stargazing.jpg', title: 'Stargazing', desc: 'Experience true darkness far from city lights. Our dark skies reveal what most never see — thousands of stars, constellations, meteor showers, and planets in stunning clarity reflected on Himbury Lake\'s still waters.', alt: 'Stargazing and dark sky views at MYS Retreat camping Ontario' },
 ];
 
 const Experience = () => (
