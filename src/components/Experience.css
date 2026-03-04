@@ -11,10 +11,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-}
-/* Last two cards center on their row if odd count */
-.experience__grid .act-card:nth-last-child(2):nth-child(odd) {
-  grid-column: 1 / 2;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .act-card {
