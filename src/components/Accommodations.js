@@ -5,7 +5,7 @@ import './Accommodations.css';
 const stays = [
   {
     title: 'Cottages',
-    price: '$125',
+    price: '$350',
     image: 'cottage-peaceful.jpg',
     description: 'Fully furnished lakefront cottages with modern amenities, stunning views, and private decks.',
     features: ['Full Kitchen', 'WiFi', 'Fireplace', 'Private Deck', 'Lake View', 'Linens Provided'],
@@ -13,28 +13,28 @@ const stays = [
   },
   {
     title: 'Tent Sites',
-    price: '$45',
+    price: '$90',
     image: 'campsite.jpg',
     description: '70 secluded sites nestled among towering pines. Fall asleep to the sound of nature.',
     features: ['Fire Pit', 'Water Nearby', 'Beach Access', 'Pet Friendly'],
   },
   {
     title: 'RV Sites',
-    price: '$65',
+    price: '$110',
     image: 'hero-2.jpg',
     description: '35 full-hookup sites with 30/50 amp service, water, and sewer — steps from the beach.',
     features: ['Full Hookup', '30/50 Amp', 'Picnic Table', 'Fire Pit'],
   },
   {
     title: 'RV Rentals',
-    price: '$95',
+    price: '$350',
     image: 'cabin.jpg',
     description: "Don't have an RV? No problem! Rent one of our RVs — various sizes available, fits up to 7 people.",
     features: ['Full Hookup', 'Shower', 'Kitchenette', 'Bed', 'Pet Friendly', 'Fits up to 7'],
   },
   {
     title: 'Cabins by Mitziville',
-    price: 'View',
+    price: '$400',
     image: 'mitziville-cabin.jpg',
     description: 'Modern modular cabin pods with floor-to-ceiling glass windows, full linens, and kitchenette. Operated by our partners at Mitziville.',
     features: ['Glass Windows', 'Full Linens', 'Kitchenette', 'Fully Equipped', 'Private Deck'],
