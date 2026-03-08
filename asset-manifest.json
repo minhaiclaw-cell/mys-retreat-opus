@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.15756114.css",
+    "main.js": "/static/js/main.dffacc5d.js",
+    "static/media/adventure-bg.jpg": "/static/media/adventure-bg.5d169eefc956711b5a12.jpg",
+    "index.html": "/index.html",
+    "main.15756114.css.map": "/static/css/main.15756114.css.map",
+    "main.dffacc5d.js.map": "/static/js/main.dffacc5d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15756114.css",
+    "static/js/main.dffacc5d.js"
+  ]
+}
