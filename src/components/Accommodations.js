@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import BookingModal from './BookingModal';
 import './Accommodations.css';
 
 const stays = [
@@ -44,9 +45,11 @@ const stays = [
 
 const Accommodations = ({ preview = false }) => {
   const displayStays = stays; // Show all accommodations
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <section id="accommodations" className="accommodations">
+      <BookingModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <div className="container">
         <motion.div
           className="accommodations__header"
@@ -101,14 +104,12 @@ const Accommodations = ({ preview = false }) => {
                     Visit Mitziville →
                   </a>
                 ) : (
-                  <a
-                    href="https://www.fireflybookings.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => setIsModalOpen(true)}
                     className="stay-card__cta"
                   >
                     Book Now →
-                  </a>
+                  </button>
                 )}
               </div>
             </motion.article>

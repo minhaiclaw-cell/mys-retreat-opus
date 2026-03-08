@@ -1,10 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { FaChevronDown } from 'react-icons/fa';
+import BookingModal from './BookingModal';
 import './Hero.css';
 
 const Hero = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { scrollY } = useScroll();
   const bgY = useTransform(scrollY, [0, 600], [0, 200]);
   const contentOpacity = useTransform(scrollY, [0, 400], [1, 0]);
@@ -21,6 +22,7 @@ const Hero = () => {
 
   return (
     <section id="home" className="hero">
+      <BookingModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <motion.div className="hero__bg" style={{ y: bgY }}>
         <img src={`${process.env.PUBLIC_URL}/hero-new.jpg`} alt="MYS Retreat campground Kearney Ontario - family camping near Algonquin Park" />
       </motion.div>
@@ -63,12 +65,12 @@ const Hero = () => {
           Where the wilderness meets the water — unforgettable moments on Himbury Lake, minutes from Algonquin Park.
         </motion.p>
         <motion.div className="hero__actions" variants={fadeUp}>
-          <Link
+          <button
             className="hero__btn hero__btn--primary"
-            to="/accommodations"
+            onClick={() => setIsModalOpen(true)}
           >
             Book Your Stay
-          </Link>
+          </button>
           <button
             className="hero__btn hero__btn--ghost"
             onClick={() => {

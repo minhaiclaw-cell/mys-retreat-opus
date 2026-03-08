@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import BookingModal from './BookingModal';
 import './Navigation.css';
 
 const navItems = [
@@ -17,6 +18,7 @@ const navItems = [
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -27,6 +29,7 @@ const Navigation = () => {
 
   return (
     <>
+      <BookingModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -55,12 +58,12 @@ const Navigation = () => {
                 )}
               </Link>
             ))}
-            <Link
-              to="/accommodations"
+            <button
+              onClick={() => setIsModalOpen(true)}
               className="nav__link nav__link--cta"
             >
               Book Now
-            </Link>
+            </button>
           </div>
 
           <button className="nav__mobile-toggle" onClick={() => setMenuOpen(!menuOpen)}>
@@ -105,13 +108,15 @@ const Navigation = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.1 + navItems.length * 0.06 }}
               >
-                <Link
-                  to="/accommodations"
+                <button
                   className="nav__mobile-link nav__mobile-link--cta"
-                  onClick={() => setMenuOpen(false)}
+                  onClick={() => {
+                    setMenuOpen(false);
+                    setIsModalOpen(true);
+                  }}
                 >
                   Book Now
-                </Link>
+                </button>
               </motion.div>
               <div className="nav__mobile-contact">
                 <a href="tel:2498888980">(249) 888-8980</a>
