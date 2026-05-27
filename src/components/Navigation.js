@@ -59,14 +59,14 @@ const Navigation = () => {
               </Link>
             ))}
             <button
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => window.location.href = "https://app.fireflyreservations.com/reserve/property/MitzivilleByTheLake"}
               className="nav__link nav__link--cta"
             >
               Book Now
             </button>
           </div>
 
-          <button className="nav__mobile-toggle" onClick={() => window.location.href = "https://app.fireflyreservations.com/reserve/property/MitzivilleByTheLake"}>
+          <button className="nav__mobile-toggle" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
