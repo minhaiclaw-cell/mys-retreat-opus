@@ -105,7 +105,7 @@ const Accommodations = ({ preview = false }) => {
                   </a>
                 ) : (
                   <button
-                    onClick={() => setIsModalOpen(true)}
+                    onClick={() => window.location.href = "https://app.fireflyreservations.com/reserve/property/MitzivilleByTheLake"}
                     className="stay-card__cta"
                   >
                     Book Now →

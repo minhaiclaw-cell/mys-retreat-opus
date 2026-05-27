@@ -66,7 +66,7 @@ const Navigation = () => {
             </button>
           </div>
 
-          <button className="nav__mobile-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+          <button className="nav__mobile-toggle" onClick={() => window.location.href = "https://app.fireflyreservations.com/reserve/property/MitzivilleByTheLake"}>
             {menuOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>

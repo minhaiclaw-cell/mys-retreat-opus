@@ -10,7 +10,7 @@ const BookingWidget = () => {
   const handleCheck = () => {
     // Will integrate with booking provider API later
     // For now, could redirect to Firefly with params
-    const url = 'https://www.fireflybookings.com'; // placeholder
+    const url = 'https://app.fireflyreservations.com/reserve/property/MitzivilleByTheLake';
     window.open(url, '_blank');
   };
 
