@@ -67,7 +67,7 @@ const Hero = () => {
         <motion.div className="hero__actions" variants={fadeUp}>
           <button
             className="hero__btn hero__btn--primary"
-            onClick={() => setIsModalOpen(true)}
+            onClick={() => window.location.href = "https://app.fireflyreservations.com/reserve/property/MitzivilleByTheLake"}
           >
             Book Your Stay
           </button>
