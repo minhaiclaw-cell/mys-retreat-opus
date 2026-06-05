@@ -26,7 +26,7 @@ const ContactPage = () => (
           marginBottom: 'var(--space-xl)',
         }}>
           {[
-            { icon: <FaPhone />, label: 'Phone', value: '(249) 888-8980', href: 'tel:2498888980' },
+            { icon: <FaPhone />, label: 'Phone', value: '(647) 948-8252', href: 'tel:6479488252' },
             { icon: <FaEnvelope />, label: 'Email', value: 'info@mysretreat.com', href: 'mailto:info@mysretreat.com' },
             { icon: <FaMapMarkerAlt />, label: 'Location', value: '2900 Highway 518\nKearney, ON P0A 1M0' },
             { icon: <FaClock />, label: 'Season', value: 'May – October\nOpen Victoria Day to Thanksgiving' },

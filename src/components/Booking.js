@@ -36,11 +36,11 @@ const Booking = () => (
           viewport={{ once: true }}
         >
           <div className="booking__contacts">
-            <a href="tel:2498888980" className="booking__contact">
+            <a href="tel:6479488252" className="booking__contact">
               <div className="booking__contact-icon"><FaPhone /></div>
               <div>
                 <span className="booking__contact-label">Phone</span>
-                <span className="booking__contact-value">(249) 888-8980</span>
+                <span className="booking__contact-value">(647) 948-8252 </span>
               </div>
             </a>
             <a href="mailto:info@mysretreat.com" className="booking__contact">
@@ -59,7 +59,7 @@ const Booking = () => (
             </div>
           </div>
 
-          <motion.a href="tel:2498888980" className="booking__cta"
+          <motion.a href="tel:6479488252" className="booking__cta"
             whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
           >
             Call to Reserve

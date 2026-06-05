@@ -168,7 +168,7 @@ const AccommodationsPage = () => (
           <p style={{ fontSize: '0.95rem', color: 'var(--text-light)', lineHeight: 1.7 }}>
             <strong style={{ color: 'var(--brand-dark)' }}>Limited availability.</strong> Seasonal sites are 
             allocated on a first-come, first-served basis. Contact our office at{' '}
-            <a href="tel:2498888980" style={{ color: 'var(--brand)', fontWeight: 600 }}>(249) 888-8980</a>
+            <a href="tel:6479488252" style={{ color: 'var(--brand)', fontWeight: 600 }}>(647) 948-8252</a>
             {' '}or{' '}
             <a href="mailto:info@mysretreat.com" style={{ color: 'var(--brand)', fontWeight: 600 }}>
               info@mysretreat.com

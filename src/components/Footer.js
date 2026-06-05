@@ -69,7 +69,7 @@ const Footer = () => (
         <div className="footer__col">
           <h4 className="footer__heading">Contact</h4>
           <ul className="footer__links">
-            <li><a href="tel:2498888980" className="footer__link"><FaPhone style={{ marginRight: 8 }} /> (249) 888-8980</a></li>
+            <li><a href="tel:6479488252" className="footer__link"><FaPhone style={{ marginRight: 8 }} /> (647) 948-8252</a></li>
             <li><a href="mailto:info@mysretreat.com" className="footer__link"><FaEnvelope style={{ marginRight: 8 }} /> info@mysretreat.com</a></li>
             <li className="footer__link" style={{ cursor: 'default' }}>2900 Highway 518, Kearney, ON</li>
           </ul>

@@ -119,7 +119,7 @@ const Navigation = () => {
                 </button>
               </motion.div>
               <div className="nav__mobile-contact">
-                <a href="tel:2498888980">(249) 888-8980</a>
+                <a href="tel:6479488252">(647) 948-8252 </a>
                 <a href="mailto:info@mysretreat.com">info@mysretreat.com</a>
               </div>
             </motion.div>

@@ -65,7 +65,7 @@ const BookingModal = ({ isOpen, onClose }) => {
 
                 <p className="booking-modal__alt">
                   <strong>Need to book now?</strong><br />
-                  Call us at <a href="tel:2498888980">(249) 888-8980</a> or email{' '}
+                  Call us at <a href="tel:6479488252">(647) 948-8252 </a> or email{' '}
                   <a href="mailto:info@mysretreat.com">info@mysretreat.com</a>
                 </p>
               </>
